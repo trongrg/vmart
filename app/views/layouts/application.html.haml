@@ -4,4 +4,19 @@
     = javascript_include_tag :application
     = stylesheet_link_tag :application
   %body
-    = yield
+    #container
+      #content
+        #logo
+          = image_tag ("logo.jpg")
+        = yield
+      %ul#nav_bar
+        %li.nav_item
+          = link_to "About", "#", :class => "active"
+        %li.nav_item
+          = link_to "Service", "#"
+        %li.nav_item
+          = link_to "Customer Tools", "#"
+        %li.nav_item
+          = link_to "Driver Sources", "#"
+        %li.nav_item
+          = link_to "Contact", "#"

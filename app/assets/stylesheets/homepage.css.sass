@@ -1,0 +1,36 @@
+@import compass
+body
+  background: url('background-orange.png') no-repeat center
+  #container
+    width: 960px
+    margin: auto
+    #content
+      position: relative
+      background: black
+      height: 600px
+      opacity: 0.8
+      margin: auto
+      margin-top: 150px
+      color: white
+      @include border-radius(15px)
+      padding: 20px
+      #logo
+        position: absolute
+        top: -140px
+    #nav_bar
+      margin-top: 50px
+      float: right
+      .nav_item
+        display: block
+        float: left
+        a
+          padding: 10px
+          text-transform: uppercase
+          text-decoration: none
+          color: white
+          font-weight: bold
+          margin-left: 10px
+          background: orange
+        .active, a:hover
+          color: orange
+          background: white

@@ -1,11 +1,17 @@
 $(document).ready ->
   $("#nav_bar .nav_item a").click (e) ->
+    url = $(this).attr("href")
     e.preventDefault()
     if $(this).is(".active")
       return
     $("#nav_bar .active").removeClass("active")
     $(this).addClass("active")
     if !$("#content").is(":visible")
+      $.ajax(
+        url: url
+        success: (response) ->
+          $("#content .ajax_content").html(response)
+      )
       width = $(this).width()
       height = $(this).height()
       $("#content").width(width).height(height)
@@ -46,17 +52,22 @@ $(document).ready ->
         {
           duration: 500
           complete: () ->
-            $("#content_surrogate .truck").animate(
-              {left: "+=1000px"}
-              {
-                duration: 500
-                complete: () ->
-                  $("#content_surrogate .truck").css("left", "-960px")
-              }
-            )
-            $("#content .ajax_content").animate(
-              {left: 20}
-              {duration: 500}
+            $.ajax(
+              url: url
+              success: (response) ->
+                $("#content .ajax_content").html(response)
+                $("#content_surrogate .truck").animate(
+                  {left: "+=1000px"}
+                  {
+                    duration: 500
+                    complete: () ->
+                      $("#content_surrogate .truck").css("left", "-960px")
+                  }
+                )
+                $("#content .ajax_content").animate(
+                  {left: 20}
+                  {duration: 500}
+                )
             )
         }
       )
@@ -80,7 +91,7 @@ $(document).ready ->
             height: $target.height()
           }
           {
-            duration: 100
+            duration: 200
             complete: () ->
               $("#content").hide()
               $target.removeClass("active")

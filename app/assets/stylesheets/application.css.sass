@@ -30,25 +30,30 @@ body
       display: none
       background: black
       height: 600px
-      opacity: 0.8
+      opacity: 0.85
       margin: auto
-      color: white
+      color: silver
       @include border-radius(15px)
       width: 920px
-      padding: 20px
+      padding: 50px 20px 20px 20px
       z-index: 1000
       .ajax_content
-        background: red
         height: 560px
-        width: 880px
+        width: 920px
         position: absolute
+        overflow: auto
+        h1
+          color: silver
+        h2, h3
+          color: orange
       .close_btn
         background: white
-        width: 20px
-        height: 20px
+        width: 30px
+        height: 30px
         position: absolute
         top: 20px
         right: 20px
+        z-index: 2000
     #nav_bar
       background: transparent
       margin-top: 50px
@@ -68,3 +73,23 @@ body
         .active, a:hover
           color: orange
           background: white
+
+
+
+.contact_form_container
+  legend
+    font-size: 35px
+  .field_row
+    margin: 10px
+    .label
+      float: left
+      width: 100px
+      text-align: right
+      padding: 10px
+    input[type='text'], input#email, textarea
+      width: 200px
+      padding: 10px
+.left
+  float: left
+.right
+  float: right

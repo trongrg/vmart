@@ -1,0 +1,31 @@
+.contact_form_container.left
+  = form_tag '/contact' do
+    %fieldset
+      %legend Contact Us
+      .field_row
+        .label
+          = label_tag :company_name, "Company"
+        = text_field_tag :company_name
+      .field_row
+        .label
+          = label_tag :name, "Name"
+        = text_field_tag :name
+      .field_row
+        .label
+          = label_tag :phone, "Phone"
+        = text_field_tag :phone
+      .field_row
+        .label
+          = label_tag :email, "Email"
+        = email_field_tag :email
+      .field_row
+        .label
+          = label_tag :message, "Message"
+        = text_area_tag :message, "", :size => "10x10"
+      .field_row
+        = submit_tag "Send"
+        = submit_tag "Reset"
+.address_container.right
+  .map
+    = image_tag "http://maps.googleapis.com/maps/api/staticmap?center=10.783923,106.709003&zoom=13&size=500x400&sensor=false&markers=color:blue%7Clabel:S%7C10.76013,106.699780&markers=color:red%7Clabel:S%7C10.807012,106.71875", :alt => "gmap"
+  .address

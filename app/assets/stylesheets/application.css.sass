@@ -1,0 +1,70 @@
+/*
+ *= require_self
+ *= require_tree .
+ */
+@import compass
+body
+  background: url('background-orange.png') no-repeat center
+  #container
+    width: 960px
+    margin: auto
+    font-family: Helvetica, Verdana, Serif
+    #logo
+    #content_surrogate
+      height: 600px
+      margin: 50px auto
+      position: relative
+      overflow: hidden
+      padding: 20px
+      .truck
+        background: white
+        display: none
+        width: 960px
+        height: 600px
+        position: absolute
+        left: -960px
+    #content
+      @include clearfix
+      position: relative
+      position: absolute
+      display: none
+      background: black
+      height: 600px
+      opacity: 0.8
+      margin: auto
+      color: white
+      @include border-radius(15px)
+      width: 920px
+      padding: 20px
+      z-index: 1000
+      .ajax_content
+        background: red
+        height: 560px
+        width: 880px
+        position: absolute
+      .close_btn
+        background: white
+        width: 20px
+        height: 20px
+        position: absolute
+        top: 20px
+        right: 20px
+    #nav_bar
+      background: transparent
+      margin-top: 50px
+      float: right
+      .nav_item
+        display: block
+        float: left
+        a
+          font-size: 12px
+          padding: 10px
+          text-transform: uppercase
+          text-decoration: none
+          color: white
+          @include border-radius(10px)
+          font-weight: bold
+          margin-left: 10px
+        .active, a:hover
+          color: orange
+          background: white

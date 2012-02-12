@@ -5,13 +5,17 @@
     = stylesheet_link_tag :application
   %body
     #container
+      #logo
+        = image_tag ("logo.jpg")
       #content
-        #logo
-          = image_tag ("logo.jpg")
-        = yield
+        .close_btn
+        .ajax_content
+          = yield
+      #content_surrogate
+        .truck
       %ul#nav_bar
         %li.nav_item
-          = link_to "About", "#", :class => "active"
+          = link_to "About", "#"
         %li.nav_item
           = link_to "Service", "#"
         %li.nav_item

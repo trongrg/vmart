@@ -51,6 +51,7 @@ Vmart::Application.routes.draw do
   root :to => 'homepage#index'
   get '/about' => 'homepage#about'
   get '/contact' => 'homepage#contact'
+  get '/links' => 'homepage#links'
 
   # See how all your routes lay out with "rake routes"
 

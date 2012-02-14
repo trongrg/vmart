@@ -27,5 +27,15 @@
         = submit_tag "Reset"
 .address_container.right
   .map
-    = image_tag "http://maps.googleapis.com/maps/api/staticmap?center=10.783923,106.709003&zoom=13&size=500x400&sensor=false&markers=color:blue%7Clabel:S%7C10.76013,106.699780&markers=color:red%7Clabel:S%7C10.807012,106.71875", :alt => "gmap"
-  .address
+    %h1 Our location
+    = image_tag("http://maps.googleapis.com/maps/api/staticmap?center=10.783923,106.709003&zoom=12&size=450x300&sensor=false&markers=color:blue%7Clabel:1%7C10.76013,106.699780&markers=color:red%7Clabel:2%7C10.807012,106.71875", :alt => "gmap")
+  .addresses
+    .address.left
+      %a{:href => "http://www.google.com/mapmaker?ll=10.796675,106.727071&spn=0.03638,0.062013&t=m&z=15&vpsrc=6&q=10.807012,106.71875&hl=en&source=gm_el", :target => "_blank"}
+        %h3 1. Head office
+        %p 115 C1, C/C P6, Tan Vinh, Ward 6, Dist.4, Hochiminh City, VietNam. Tel: 84-8-62716078
+    .address.left
+      %a{:href => "http://www.google.com/mapmaker?ll=10.796675,106.727071&spn=0.03638,0.062013&t=m&z=15&vpsrc=6&q=10.807012,106.71875&hl=en&source=gm_el", :target => "_blank"}
+        %h3 2. Transaction office
+        %p Room 3A, 3rd Floor, 192-194A Ung Van Khiem Street, Ward 25, Binh Thanh District., Hochiminh City, VietNam.
+

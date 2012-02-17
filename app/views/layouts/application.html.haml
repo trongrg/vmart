@@ -6,27 +6,33 @@
     %title VMart Logistics
   %body
     #container
-      #logo
-        = image_tag ("logo.jpg")
       #content
         .close_btn
         .ajax_content
           = yield
       #content_surrogate
         .truck
-      %ul#nav_bar
-        %li.nav_item
-          = link_to "About", "/about"
-        %li.nav_item
-          = link_to "Services", "#"
-        %li.nav_item
-          = link_to "Customer Tools", "#"
-        %li.nav_item
-          = link_to "Links", "/links"
-        %li.nav_item
-          = link_to "Contact", "/contact"
-        %li.nav_item
-          = link_to "Document", "/document"
-        %li.nav_item
-          = link_to "Quota", "/quota"
-
+      #nav_bar
+        .sub_menu_container
+          %ul.sub_menu{:item => "About"}
+            %li.sub_menu_item
+              = link_to "History", "/history"
+            %li.sub_menu_item
+              = link_to "Networks Market", "/networks_and_market"
+        %ul.nav_bar_container
+          %li.nav_item
+            = link_to "About", "/about", :class => "item"
+          %li.nav_item
+            = link_to "Services", "/services", :class => "item"
+          %li.nav_item
+            = link_to "Customer Tools", "/customer_tools", :class => "item"
+          %li.nav_item
+            = link_to "Links", "/links", :class => "item"
+          %li.nav_item
+            = link_to "Contact", "/contact", :class => "item"
+          %li.nav_item
+            = link_to "Document", "/document", :class => "item"
+          %li.nav_item
+            = link_to "Quota", "/quota", :class => "item"
+    #logo
+      = image_tag ("logo.jpg")

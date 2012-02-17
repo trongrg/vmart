@@ -5,11 +5,14 @@
 @import compass
 body
   background: url('background-orange.png') no-repeat center
+  #logo
+    position: absolute
+    left: 100px
+    bottom: 100px
   #container
     width: 960px
     margin: auto
-    font-family: Helvetica, Verdana, Serif
-    #logo
+    font-family: Helvetica, Helvetica, serif
     #content_surrogate
       height: 600px
       margin: 50px auto
@@ -25,7 +28,6 @@ body
         left: -960px
     #content
       @include clearfix
-      position: relative
       position: absolute
       display: none
       background: black
@@ -56,25 +58,54 @@ body
         z-index: 2000
     #nav_bar
       background: transparent
-      margin-top: 50px
       float: right
+      .sub_menu_container
+        height: 85px
+        overflow: hidden
+        position: relative
+        .sub_menu
+          display: none
+          position: absolute
+          top: 0px
+          left: 0px
+          padding: 0px
+          .sub_menu_item
+            display: block
+            a
+              font-size: 12px
+              padding: 7px
+              margin: 3px 0px
+              text-transform: uppercase
+              text-decoration: none
+              @include border-radius(12px)
+              font-weight: bold
+              display: block
+              color: orange
+              background: white
+            a:hover
+              background: black
+              opacity: 0.8
+              border: 1px solid white
+      ul.nav_bar_container
+        margin: 0
       .nav_item
         display: block
         float: left
-        a
+        position: relative
+        a.item
           font-size: 12px
-          padding: 10px
+          padding: 7px 10px
           text-transform: uppercase
           text-decoration: none
           color: white
-          @include border-radius(10px)
+          @include border-radius(12px)
           font-weight: bold
           margin-left: 10px
-        .active, a:hover
+          display: block
+          z-index: 1000
+        .item.active, .item:hover
           color: orange
           background: white
-
-
 
 .contact_form_container
   legend

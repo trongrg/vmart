@@ -137,20 +137,28 @@ $(document).ready ->
   $("#nav_bar .nav_item a.item").mouseout (e) ->
     $target = $(e.currentTarget)
     $sub_menu = $(".sub_menu[item='"+$target.text()+"']")
-    if (e.pageX < $sub_menu.offset().left || e.pageY < $sub_menu.offset().top ||
-      e.pageX > $sub_menu.offset().left + $sub_menu.width() ||
-      e.pageY > $sub_menu.offset().top + $sub_menu.height()
+    $(document).data[$target.text()] = setTimeout(
+      () ->
+        $sub_menu.animate(
+          {top: "+="+($sub_menu.height()+10)+"px"}
+          complete: () ->
+            $sub_menu.hide()
+        )
+      200
     )
-      $sub_menu.animate(
-        {top: "+="+($sub_menu.height()+10)+"px"}
-        complete: () ->
-          $sub_menu.hide()
-      )
 
   $("#nav_bar .sub_menu").mouseleave (e) ->
     $sub_menu = $(e.currentTarget)
-    $sub_menu.animate(
-      {top: "+="+($sub_menu.height()+10)+"px"}
-      complete: () ->
-        $sub_menu.hide()
+    $(document).data[$sub_menu.attr('item')]= setTimeout(
+      () ->
+        $sub_menu.animate(
+          {top: "+="+($sub_menu.height()+10)+"px"}
+          complete: () ->
+            $sub_menu.hide()
+        )
+      200
     )
+
+  $("#nav_bar .sub_menu").mouseenter (e) ->
+    $sub_menu = $(e.currentTarget)
+    clearTimeout($(document).data[$sub_menu.attr('item')])

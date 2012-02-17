@@ -52,7 +52,9 @@ Vmart::Application.routes.draw do
   get '/about' => 'homepage#about'
   get '/contact' => 'homepage#contact'
   get '/links' => 'homepage#links'
-
+  get '/services' => 'homepage#services'
+  get '/documents' => 'homepage#documents'
+  get '/tools' => 'homepage#tool'
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

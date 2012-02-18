@@ -5,7 +5,7 @@
 @import compass
 @import 'sassy-buttons'
 body
-  background: url('trucks.png') no-repeat center
+  background: url('background-orange.png') no-repeat center
   #logo
     position: absolute
     left: 100px
@@ -21,7 +21,7 @@ body
       overflow: hidden
       padding: 20px
       .truck
-        background: white
+        background: url("running-truck.png") no-repeat center
         display: none
         width: 960px
         height: 600px
@@ -112,6 +112,7 @@ legend
   font-size: 32px
   font-weight: bold
 .contact_form_container
+  width: 400px
   .field_row
     margin: 5px
     .label
@@ -127,10 +128,11 @@ legend
       @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
 .map
   width: 400px
+  height: 326px
   margin-left: 20px
 .addresses
   .address
-    width: 220px
+    width: 300px
     a
       text-decoration: none
       color: gray

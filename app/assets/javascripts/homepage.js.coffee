@@ -57,6 +57,7 @@ $(document).ready ->
         }
       )
       #truck fly from left to right
+      $("#content_surrogate .truck").css("z-index", "2000")
       $("#content_surrogate .truck").animate(
         {left: 0}
         {

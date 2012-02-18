@@ -14,14 +14,19 @@
         .truck
       #nav_bar
         .sub_menu_container
-          %ul.sub_menu{:item => "About"}
+          %ul.sub_menu{:item => "About Us"}
             %li.sub_menu_item
               = link_to "History", "/history"
+            %li.sub_menu_item
+              = link_to "Networks/Markets", "/networks_and_market"
+          %ul.sub_menu{:item => "Services"}
+            %li.sub_menu_item
+              = link_to "Air Freight", "/history"
             %li.sub_menu_item
               = link_to "Networks Market", "/networks_and_market"
         %ul.nav_bar_container
           %li.nav_item
-            = link_to "About", "/about", :class => "item"
+            = link_to "About Us", "/about", :class => "item"
           %li.nav_item
             = link_to "Services", "/services", :class => "item"
           %li.nav_item
@@ -33,6 +38,6 @@
           %li.nav_item
             = link_to "Documents", "/documents", :class => "item"
           %li.nav_item
-            = link_to "Quota", "/quota", :class => "item"
+            = link_to "Quote", "/quote", :class => "item"
     #logo
       = image_tag ("logo.jpg")

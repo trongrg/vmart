@@ -2,6 +2,8 @@
   = form_tag '/contact' do
     %fieldset
       %legend Contact Us
+      .field_row.tool_tip
+        Please leave the message &amp; your email. We will contact you as soon as possible. Thank you !
       .field_row
         .label
           = label_tag :email, "Email"
@@ -13,34 +15,48 @@
       .field_row
         .label
           = label_tag :message, "Message"
-        = text_area_tag :message, "", :size => "10x10"
+        = text_area_tag :message, "", :size => "10x7"
       .field_row
         = submit_tag "Send"
         = submit_tag "Reset"
 .map.left
   %fieldset
     %legend Our location
-    = image_tag("http://maps.googleapis.com/maps/api/staticmap?center=10.783923,106.709003&zoom=12&size=450x266&sensor=false&markers=color:blue%7Clabel:1%7C10.76013,106.699780&markers=color:red%7Clabel:2%7C10.807012,106.71875", :alt => "gmap")
+    = image_tag("http://maps.googleapis.com/maps/api/staticmap?center=10.783923,106.709003&zoom=12&size=450x268&sensor=false&markers=color:blue%7Clabel:1%7C10.760037,106.70019&markers=color:red%7Clabel:2%7C10.807012,106.71875", :alt => "gmap")
 .addresses
   .address.left
-    %a{:href => "http://www.google.com/mapmaker?ll=10.796675,106.727071&spn=0.03638,0.062013&t=m&z=15&vpsrc=6&q=10.807012,106.71875&hl=en&source=gm_el", :target => "_blank"}
+    %a{:href => "http://www.google.com/mapmaker?gw=55&ll=10.761937,106.701837&spn=0.034909,0.061626&z=15&vpid=1329566100219&hl=en&iwloc=2_0&editids=hhLLw7utKUmwObCffX&lyt=large_map", :target => "_blank"}
       %h3 1. Head office
-      %p 115 C1, C/C P6, Tan Vinh, Ward 6, Dist.4, Hochiminh City, VietNam. Tel: 84-8-62716078
-      %p Tel: + 84 8 38991136 - 38991137 - 38991138
-      %p Fax: + 84 8 38991156
+      %p 115 C1, C/C P6, Tan Vinh, Ward 6, District 4, Ho Chi Minh City, VietNam
+      %p
+        Tel: + 84 8 389911 36 - 37 - 38
+        %br
+        Fax: + 84 8 38991156
+    %p
+      = "Mr. John: #{link_to "john@vmartlogistics.com.vn", "mailto:john@vmartlogistics.com.vn"}".html_safe
+      %br
+      Executive Director
+
   .address.left
-    %a{:href => "http://www.google.com/mapmaker?ll=10.796675,106.727071&spn=0.03638,0.062013&t=m&z=15&vpsrc=6&q=10.807012,106.71875&hl=en&source=gm_el", :target => "_blank"}
+    %a{:href => "http://www.google.com/mapmaker?iwloc=0_0&gw=55&editids=hhLLw7utKUmwObCffX&ll=10.760461,106.700206&spn=0.017455,0.030813&z=16&lyt=large_map&htll=10.760037,106.70019", :target => "_blank"}
       %h3 2. Transaction office
-      %p Room 3A, 3rd Floor, 192-194A Ung Van Khiem Street, Ward 25, Binh Thanh District., Hochiminh City, VietNam.
-      %p Tel: +84 8 35123810 - 35123811
-      %p Fax: + 84 8 38991156
+      %p Room 3A, 3rd Floor, 192-194A Ung Van Khiem Street, Ward 25, Binh Thanh District, Ho Chi Minh City, VietNam.
+      %p
+        Tel: +84 8 351238 10 - 11
+        %br
+        Fax: + 84 8 38991156
+    %p
+      = "Mr. Kent: #{link_to "kent@vmartlogistics.com.vn", "mailto:kent@vmartlogistics.com.vn"}".html_safe
+      %br
+      Managing Director
 
   .address.left
-    %h3 3. Directors
-    %p= "Mr. John: #{link_to "john@vmartlogistics.com.vn", "mailto:john@vmartlogistics.com.vn"}".html_safe
-    %p= "Mr. Kent: #{link_to "kent@vmartlogistics.com.vn", "mailto:kent@vmartlogistics.com.vn"}".html_safe
-
-  .address.left
-    %h3 4. Other departments
-    %p= "Document Dept, Ms. Lucia: #{link_to "lucia@vmartlogistics.com.vn", "mailto:lucia@vmartlogistics.com.vn"}".html_safe
-    %p= "Sales & Marketing Dept, Ms. Linda #{link_to "linda@vmartlogistics.com.vn", "mailto:lucia@vmartlogistics.com.vn"}".html_safe
+    %h3 3. Departments
+    %p
+      = "Ms. Lucia: #{link_to "lucia@vmartlogistics.com.vn", "mailto:lucia@vmartlogistics.com.vn"}".html_safe
+      %br
+      Inbound/Outbound
+    %p
+      = "Ms. Linda #{link_to "linda@vmartlogistics.com.vn", "mailto:lucia@vmartlogistics.com.vn"}".html_safe
+      %br
+      Sales &amp; Marketing

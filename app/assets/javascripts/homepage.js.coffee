@@ -1,5 +1,5 @@
 $(document).ready ->
-  $("#nav_bar .nav_item a").click (e) ->
+  $("#nav_bar .nav_item a, #nav_bar .sub_menu_item a").click (e) ->
     e.preventDefault()
     url = $(this).attr("href")
     #do nothing if the link is already active
@@ -116,9 +116,10 @@ $(document).ready ->
     )
   $("#nav_bar .nav_item a.item").mouseover (e) ->
     $target = $(e.currentTarget)
+    clearTimeout($(document).data[$target.text()])
     $target.offset($target.offset())
     $target.animate(
-      {top: "-=10px"}
+      {top: "-=8px"}
       {duration: 200}
     )
     $sub_menu = $(".sub_menu[item='"+$target.text()+"']")
@@ -126,23 +127,22 @@ $(document).ready ->
     $sub_menu.offset($target.offset())
     $sub_menu.animate(top: -6)
 
-  $("#nav_bar .nav_item a.item").mouseleave (e) ->
-    $target = $(e.currentTarget)
-    $target.offset($target.offset())
-    $target.animate(
-      {top: "+=10px"}
-      {duration: 200}
-    )
-
   $("#nav_bar .nav_item a.item").mouseout (e) ->
     $target = $(e.currentTarget)
+    $target.animate(
+      {top: "+=8px"}
+      {duration: 200}
+    )
     $sub_menu = $(".sub_menu[item='"+$target.text()+"']")
     $(document).data[$target.text()] = setTimeout(
       () ->
         $sub_menu.animate(
-          {top: "+="+($sub_menu.height()+10)+"px"}
-          complete: () ->
-            $sub_menu.hide()
+          {top: "+="+($sub_menu.height()+8)+"px"}
+          {
+            duration: 200
+            complete: () ->
+              $sub_menu.hide()
+          }
         )
       200
     )
@@ -152,9 +152,12 @@ $(document).ready ->
     $(document).data[$sub_menu.attr('item')]= setTimeout(
       () ->
         $sub_menu.animate(
-          {top: "+="+($sub_menu.height()+10)+"px"}
-          complete: () ->
-            $sub_menu.hide()
+          {top: "+="+($sub_menu.height()+8)+"px"}
+          {
+            duration: 200
+            complete: () ->
+              $sub_menu.hide()
+          }
         )
       200
     )

@@ -1,14 +1,18 @@
 %fieldset
   %legend
-    %h1 Download Document
+    Download Document
   .container
     %ul
       %li.none_style
-        %img#document_image{:src => "assets/invoice.png"}
-        %h2 Sample Commercial Invoice Form
-        .invoice_link= link_to "Link: iqglobal.com/shipdoc/invoice", "http://vmartlogistics.com.vn/front/form/SampleCommercialInvoiceForm.pdf"
+        .left
+          %img#document_image{:src => "assets/invoice.png"}
+        .left
+          %h2 Sample Commercial Invoice Form
+          .invoice_link= link_to "Link: iqglobal.com/shipdoc/invoice", "http://vmartlogistics.com.vn/front/form/SampleCommercialInvoiceForm.pdf"
 
       %li.none_style
-        %img#document_image{:src => "assets/packing_list.png"}
-        %h2 Sample Packing list Form
-        .invoice_link= link_to "Link: iqglobal.com/shipdoc/packing", "http://vmartlogistics.com.vn/front/form/SamplePackinglistForm.pdf"
+        .left
+          %img#document_image{:src => "assets/packing_list.png"}
+        .left
+          %h2 Sample Packing list Form
+          .invoice_link= link_to "Link: iqglobal.com/shipdoc/packing", "http://vmartlogistics.com.vn/front/form/SamplePackinglistForm.pdf"

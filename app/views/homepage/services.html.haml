@@ -1,7 +1,21 @@
 %fieldset
   %legend
-    %h1 Services
-  .container
-    %img#services_link{:src => "assets/services.png"}
-    %p In addition, we provide full range of logistics related service such as: apply import licence, test quality, Certificate of Origin...
+    Services
+  .container.services
+    .sea_freight.left
+      %h3 Sea Frieght
+      = image_tag "services/sea_freight.png"
+    .air_freight.left
+      %h3 Air Frieght
+      = image_tag "services/air_freight.png"
+    %div{ :style => "clear: both" }
+    .truck.left
+      %h3 Truck
+      = image_tag "services/truck.png"
+    .broker.left
+      %h3 Customer Broker
+      = image_tag "services/broker.png"
+    %div{ :style => "clear: both" }
+    %h3 Shipping quality is job no. 1
+
 

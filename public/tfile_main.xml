@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <SplashGallery name="Splash_gallery" folder="gallery">
+    <titleImages>
+      <bigImages>tfile_pics_big_images_3.jpg</bigImages>
+      <descriptionImages><![CDATA[<font letterspacing = "-2">HANDLING</font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font letterspacing = "-1.5"></font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font letterspacing = "-1.5">WITH</font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font letterspacing = "0">A</font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font letterspacing = "-2.2">HEART</font> ]]></descriptionImages>
+    </titleImages>
+
+    <titleImages>
+      <bigImages>tfile_pics_big_images_2.jpg</bigImages>
+      <descriptionImages><![CDATA[<font></font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font>SHIPPING</font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font></font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font>QUALITY IS</font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font>JOB NO. 1</font> ]]></descriptionImages>
+    </titleImages>
+
+    <titleImages>
+      <bigImages>tfile_pics_big_images_1.jpg</bigImages>
+      <descriptionImages><![CDATA[<font></font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font>INTEGRATED</font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font></font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font>SUPPLY CHAIN</font> ]]></descriptionImages>
+      <descriptionImages><![CDATA[<font>SOLUTION</font> ]]></descriptionImages>
+    </titleImages>
+
+  </SplashGallery>
+</root>

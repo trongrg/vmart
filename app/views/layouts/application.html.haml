@@ -5,39 +5,61 @@
     = stylesheet_link_tag :application
     %title VMart Logistics
   %body
-    #container
-      #content
-        .close_btn
-        .ajax_content
-          = yield
-      #content_surrogate
-        .truck
-      #nav_bar
-        .sub_menu_container
-          %ul.sub_menu{:item => "About Us"}
-            %li.sub_menu_item
-              = link_to "History", "/history"
-            %li.sub_menu_item
-              = link_to "Networks/Markets", "/networks_and_market"
-          %ul.sub_menu{:item => "Services"}
-            %li.sub_menu_item
-              = link_to "Air Freight", "/history"
-            %li.sub_menu_item
-              = link_to "Networks Market", "/networks_and_market"
-        %ul.nav_bar_container
-          %li.nav_item
-            = link_to "About Us", "/about", :class => "item"
-          %li.nav_item
-            = link_to "Services", "/services", :class => "item"
-          %li.nav_item
-            = link_to "Customer Tools", "/tools", :class => "item"
-          %li.nav_item
-            = link_to "Links", "/links", :class => "item"
-          %li.nav_item
-            = link_to "Contact", "/contact", :class => "item"
-          %li.nav_item
-            = link_to "Documents", "/documents", :class => "item"
-          %li.nav_item
-            = link_to "Quote", "/quote", :class => "item"
-    #logo
-      = image_tag ("logo.jpg")
+    .tail_bg
+      .bot_bg
+        #container
+          #content
+            .close_btn
+            .ajax_content
+              = yield
+          #content_surrogate
+            #flash
+              %object{ :classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :codebase => "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0", :width => "978", :height => "550"}
+                %param{ :name => "movie", :value => "slideshow_fv8.swf"}
+                %param{ :name => "quality", :value => "high"}
+                %param{ :name => "menu", :value => "false"}
+                %param{ :name => "wmode", :value => "transparent"}
+                %embed{ :src => "slideshow_fv8.swf", :quality => "high", :menu => "true", :wmode => "transparent", :pluginspage => "http://www.macromedia.com/go/getflashplayer", :type => "application/x-shockwave-flash", :width => "978", :height => "450"}
+            .truck
+          #nav_bar
+            #logo
+              = image_tag ("Logo_V-Mart.png")
+            #menu_bar
+              %ul.nav_bar_container
+                %li.nav_item
+                  = link_to "About Us", "/about", :class => "item"
+                %li.nav_item
+                  = link_to "Services", "/services", :class => "item"
+                %li.nav_item
+                  = link_to "Tools", "/tools", :class => "item"
+                %li.nav_item
+                  = link_to "Links", "/links", :class => "item"
+                %li.nav_item
+                  = link_to "Documents", "/documents", :class => "item"
+                %li.nav_item
+                  = link_to "News", "/news", :class => "item"
+                %li.nav_item
+                  = link_to "Contact", "/contact", :class => "item"
+                %li.nav_item
+                  = link_to "Quote", "/quote", :class => "item"
+              %div{ :style => "clear:both" }
+              .sub_menu_container
+                %ul.sub_menu{:item => "About Us"}
+                  %li.sub_menu_item
+                    = link_to "Brief Outlook", "/brief_outlook"
+                  %li.sub_menu_item
+                    = link_to "Networks/Markets", "/networks_markets"
+                %ul.sub_menu{:item => "Services"}
+                  %li.sub_menu_item
+                    = link_to "Sea Freight", "/sea_freight"
+                  %li.sub_menu_item
+                    = link_to "Air Freight", "/air_freight"
+                  %li.sub_menu_item
+                    = link_to "Pickup<br/>Delivery".html_safe, "/pickup_delivery"
+                  %li.sub_menu_item
+                    = link_to "Consolidation<br/>Warehouse".html_safe, "/consolidation_warehouse"
+                  %li.sub_menu_item
+                    = link_to "Heavy Lift", "/heavy_lift"
+                  %li.sub_menu_item
+                    = link_to "Removal/Packing", "/removal_packing"
+              %div{ :style => "clear:both" }

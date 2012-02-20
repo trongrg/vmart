@@ -5,15 +5,18 @@
 @import compass
 @import 'sassy-buttons'
 body
-  background: url('background-orange.png') no-repeat center
+  margin: 0
+  .tail_bg
+    background: url(tail-bg.jpg) repeat-y left top
+    .bot_bg
+      background: url(bot-bg.jpg) no-repeat left bottom
   #logo
-    position: absolute
-    left: 100px
-    bottom: 100px
+    float: left
   #container
     width: 960px
     margin: auto
     font-family: Helvetica, Helvetica, serif
+    @include clearfix
     #content_surrogate
       height: 600px
       margin: 50px auto
@@ -60,53 +63,67 @@ body
     #nav_bar
       background: transparent
       float: right
-      .sub_menu_container
-        height: 85px
-        overflow: hidden
-        position: relative
-        .sub_menu
-          display: none
-          position: absolute
-          top: 0px
-          left: 0px
-          padding: 0px
-          .sub_menu_item
-            display: block
-            a
-              font-size: 12px
-              padding: 7px
-              margin: 3px 0px
-              text-transform: uppercase
-              text-decoration: none
-              @include border-radius(12px)
-              font-weight: bold
+      @include clearfix
+      #menu_bar
+        float: right
+        width: 710px
+        @include clearfix
+        .sub_menu_container
+          @include clearfix
+          height: 85px
+          //overflow: hidden
+          position: relative
+          .sub_menu
+            display: none
+            @include clearfix
+            position: absolute
+            left: 60px !important
+            margin: 0
+            padding: 0
+            .sub_menu_item
               display: block
-              color: orange
-              background: white
-            a:hover
-              background: black
-              opacity: 0.8
-              border: 1px solid white
-      ul.nav_bar_container
-        margin: 0
-      .nav_item
-        display: block
-        float: left
-        position: relative
-        a.item
-          font-size: 12px
-          padding: 7px 10px
-          text-transform: uppercase
-          text-decoration: none
-          color: white
-          @include border-radius(12px)
-          font-weight: bold
-          margin-left: 10px
+              float: left
+              margin-right: 10px
+              a
+                font-size: 12px
+                padding: 7px
+                margin: 3px 0px
+                text-transform: uppercase
+                text-decoration: none
+                @include border-radius(12px)
+                font-weight: bold
+                display: block
+                color: white
+                background: #fa7121
+              a:hover
+                background: black
+                opacity: 0.8
+                color: #fa7121
+                background: white
+        ul.nav_bar_container
+          margin: 20px 0 0 0
+          padding-top: 10px
+          float: right
+          @include clearfix
+        .nav_item
           display: block
-          z-index: 1000
-        .item.active, .item:hover
-          color: orange
-          background: white
+          float: left
+          position: relative
+          a.item
+            font-size: 12px
+            padding: 7px 10px
+            text-transform: uppercase
+            text-decoration: none
+            color: white
+            background: #fa7121
+            @include border-radius(12px)
+            font-weight: bold
+            margin-left: 10px
+            display: block
+            z-index: 1000
+          .item.active, .item:hover
+            color: #fa7121
+            background: white
 
 legend
   font-size: 32px

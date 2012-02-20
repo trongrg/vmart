@@ -1,6 +1,10 @@
 $(document).ready ->
+  $(".tail_bg, .bot_bg").css("min-height", window.innerHeight)
+
   $("#nav_bar .nav_item a, #nav_bar .sub_menu_item a").click (e) ->
     e.preventDefault()
+    if ($("#flash").is(":visible"))
+      $("#flash").hide()
     url = $(this).attr("href")
     #do nothing if the link is already active
     if $(this).is(".active")
@@ -88,8 +92,13 @@ $(document).ready ->
       )
   $("#content .close_btn").click (e) ->
     $target = $("#nav_bar .nav_item .active")
+    if ($target.length == 0)
+      $target = $("#nav_bar .nav_item a:first")
     top = "-=" + ($("#content_surrogate").offset().top - $target.offset().top - 25).toString() + "px"
     left = "-=" + ($("#content_surrogate").offset().left - $target.offset().left - 25).toString() + "px"
+
+    if (!$("#flash").is(":visible"))
+      $("#flash").show()
     #content scale up to 1.1 size
     $("#content").animate(
       {
@@ -126,7 +135,7 @@ $(document).ready ->
     $sub_menu = $(".sub_menu[item='"+$target.text()+"']")
     $sub_menu.show()
     $sub_menu.offset($target.offset())
-    $sub_menu.animate(top: -6)
+    $sub_menu.animate(top: 0)
 
   $("#nav_bar .nav_item a.item").mouseout (e) ->
     $target = $(e.currentTarget)
@@ -138,7 +147,7 @@ $(document).ready ->
     $(document).data[$target.text()] = setTimeout(
       () ->
         $sub_menu.animate(
-          {top: "+="+($sub_menu.height()+8)+"px"}
+          {top: "-="+($sub_menu.height()+8)+"px"}
           {
             duration: 200
             complete: () ->
@@ -153,7 +162,7 @@ $(document).ready ->
     $(document).data[$sub_menu.attr('item')]= setTimeout(
       () ->
         $sub_menu.animate(
-          {top: "+="+($sub_menu.height()+8)+"px"}
+          {top: "-="+($sub_menu.height()+8)+"px"}
           {
             duration: 200
             complete: () ->

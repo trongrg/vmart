@@ -10,4 +10,10 @@ Vmart::Application.routes.draw do
   get '/bank_details' => 'homepage#bank_details'
   get '/consign_a_shipment' => 'homepage#consign_a_shipment'
   get '/news' => 'homepage#news'
+  get '/sea_freight' => 'homepage#sea_freight'
+  get '/air_freight' => 'homepage#air_freight'
+  get '/pickup_delivery' => 'homepage#pickup_delivery'
+  get '/consolidation_warehouse' => 'homepage#consolidation_warehouse'
+  get 'heavy_lift' => 'homepage#heavy_lift'
+  get 'removal_packing' => 'homepage#removal_packing'
 end

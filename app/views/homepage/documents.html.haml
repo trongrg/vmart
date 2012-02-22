@@ -8,11 +8,32 @@
           %img#document_image{:src => "assets/invoice.png"}
         .left
           %h2 Sample Commercial Invoice Form
-          .invoice_link= link_to "Link: iqglobal.com/shipdoc/invoice", "http://vmartlogistics.com.vn/front/form/SampleCommercialInvoiceForm.pdf"
+          .div
+            .left
+              .invoice_link= link_to "Link: iqglobal.com/shipdoc/invoice", "invoice.pdf", :target => "_blank"
+            .right
+              %a{:href => "invoice.xls"}
+                %img#download{:src => "assets/download.png"}/
 
       %li.none_style
         .left
           %img#document_image{:src => "assets/packing_list.png"}
         .left
           %h2 Sample Packing list Form
-          .invoice_link= link_to "Link: iqglobal.com/shipdoc/packing", "http://vmartlogistics.com.vn/front/form/SamplePackinglistForm.pdf"
+          .div
+            .left
+              .invoice_link= link_to "Link: iqglobal.com/shipdoc/packing", "packing_list.pdf", :target => "_blank"
+            .right
+              %a{:href => "packing_list.xls"}
+                %img#download{:src => "assets/download.png"}/
+      %li.none_style
+        .left
+          %img#document_image{:src => "assets/request.jpg"}
+        .left
+          %h2 Sample Commercial Request Form
+          .div
+            .left
+              .invoice_link= link_to "Link: iqglobal.com/shipdoc/request", "shipping_request.pdf", :target => "_blank"
+            .right
+              %a{:href => "shipping_request.xls"}
+                %img#download{:src => "assets/download.png"}/

@@ -1,33 +1,37 @@
-.contact_form_container.left
-  = form_tag '/contact' do
+.contact_map
+  .contact_form_container.left
+    = form_tag '/contact' do
+      %fieldset
+        %legend Contact Us
+        .field_row.tool_tip
+          Please leave the message &amp; your email. We will contact you as soon as possible. Thank you !
+        .field_row
+          .label
+            = label_tag :email, "Email"
+          = email_field_tag :email
+        .field_row
+          .label
+            =label_tag :subject, "Subject"
+          = text_field_tag :subject
+        .field_row
+          .label
+            = label_tag :message, "Message"
+          = text_area_tag :message, "", :size => "10x7"
+        .field_row
+          = submit_tag "Send"
+          = submit_tag "Reset"
+  .map.left
     %fieldset
-      %legend Contact Us
-      .field_row.tool_tip
-        Please leave the message &amp; your email. We will contact you as soon as possible. Thank you !
-      .field_row
-        .label
-          = label_tag :email, "Email"
-        = email_field_tag :email
-      .field_row
-        .label
-          =label_tag :subject, "Subject"
-        = text_field_tag :subject
-      .field_row
-        .label
-          = label_tag :message, "Message"
-        = text_area_tag :message, "", :size => "10x7"
-      .field_row
-        = submit_tag "Send"
-        = submit_tag "Reset"
-.map.left
-  %fieldset
-    %legend Our location
-    = image_tag("http://maps.googleapis.com/maps/api/staticmap?center=10.783923,106.709003&zoom=12&size=450x268&sensor=false&markers=color:blue%7Clabel:1%7C10.760037,106.70019&markers=color:red%7Clabel:2%7C10.807012,106.71875", :alt => "gmap")
+      %legend Our location
+      = image_tag("http://maps.googleapis.com/maps/api/staticmap?center=10.783923,106.709003&zoom=12&size=450x268&sensor=false&markers=color:blue%7Clabel:1%7C10.760037,106.70019&markers=color:red%7Clabel:2%7C10.807012,106.71875", :alt => "gmap")
 .addresses
   .address.left
     %a{:href => "http://www.google.com/mapmaker?gw=55&ll=10.761937,106.701837&spn=0.034909,0.061626&z=15&vpid=1329566100219&hl=en&iwloc=2_0&editids=hhLLw7utKUmwObCffX&lyt=large_map", :target => "_blank"}
       %h3 1. Head office
-      %p 115 C1, C/C P6, Tan Vinh, Ward 6, District 4, Ho Chi Minh City, VietNam
+      %p
+        115 C1, C/C P6, Tan Vinh, Ward 6, District 4,
+        %br
+        Ho Chi Minh City, VietNam
       %p
         Tel: + 84 8 389911 36 - 37 - 38
         %br

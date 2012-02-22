@@ -131,25 +131,27 @@ body
 legend
   font-size: 32px
   font-weight: bold
-.contact_form_container
-  width: 400px
-  .field_row
-    margin: 5px
-    .label
-      float: left
-      width: 80px
-      text-align: right
-      padding: 5px
-    input[type='text'], input#email, textarea
-      width: 240px
-      padding: 5px
-    input[type='submit']
-      float: right
-      @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
-.map
-  width: 400px
-  height: 326px
-  margin-left: 20px
+.contact_map
+  @include clearfix
+  .contact_form_container
+    width: 400px
+    .field_row
+      margin: 5px
+      .label
+        float: left
+        width: 80px
+        text-align: right
+        padding: 5px
+      input[type='text'], input#email, textarea
+        width: 240px
+        padding: 5px
+      input[type='submit']
+        float: right
+        @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
+  .map
+    width: 400px
+    height: 326px
+    margin-left: 20px
 .addresses
   .address
     width: 300px
@@ -174,9 +176,17 @@ legend
 .useful_link
   font-size: 20px
   margin-top: 10px
+  li
+    @include clearfix
+  img
+    float: left
+    margin-right: 5px
   a
     color: yellow
     text-decoration: none
+    display: block
+    padding-top: 5px
+    float: left
 
 fieldset
   border-radius: 10px
@@ -214,6 +224,8 @@ li.none_style
     li
       list-style: none
       margin: 10px
+      strong
+        color: red
 
 .consign_shipment
   p

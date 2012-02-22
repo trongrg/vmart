@@ -9,4 +9,5 @@ Vmart::Application.routes.draw do
   get '/brief_outlook' => 'homepage#brief_outlook'
   get '/bank_details' => 'homepage#bank_details'
   get '/consign_a_shipment' => 'homepage#consign_a_shipment'
+  get '/news' => 'homepage#news'
 end

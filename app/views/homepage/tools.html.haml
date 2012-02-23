@@ -6,16 +6,19 @@
   .tools
     .dry_container
       .left
-        = image_tag "dry_container.jpg"
-      .left
-        = link_to "Dry Container's dimension", "/container_size.pdf"
+        = link_to "<h3>Dry Container's dimension</h3>".html_safe, "/container_size.pdf"
+        = link_to image_tag("dry_container.jpg", :size => "400x400"), "/container_size.pdf"
+      .left.download
+        = link_to image_tag("download.png", :size => "210x110"), "/container_size.pdf"
     .unit_load_device
       .left
-        = image_tag "dry_container.jpg"
-      .left
-        = link_to "Unit Load Device", "/container_size.pdf"
+        = link_to "<h3>Unit Load Device</h3>".html_safe, "/Unit Load AIR Containers.doc"
+        = link_to image_tag("unit_load_device.jpg", :size => "400x400"), "/Unit Load AIR Containers.doc"
+      .left.download
+        = link_to image_tag("download.png", :size => "210x110"), "/Unit Load AIR Containers.doc"
     .incoterm
       .left
-        = image_tag "dry_container.jpg"
-      .left
-        = link_to "Incoterms 2010", "#"
+        = link_to "<h3>Incoterms 2010</h3>".html_safe, "/Incoterms_2010_chart.pdf"
+        = link_to image_tag("incoterms-2010.jpg", :size => "400x400"), "/Incoterms_2010_chart.pdf"
+      .left.download
+        = link_to image_tag("download.png", :size => "210x110"), "/Incoterms_2010_chart.pdf"

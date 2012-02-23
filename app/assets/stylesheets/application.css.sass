@@ -6,6 +6,10 @@
 @import 'sassy-buttons'
 body
   margin: 0
+  #logo
+    position: absolute
+    top: 50px
+    left: 50px
   .tail_bg
     background: url(tail-bg.jpg) repeat-y left top
     .bot_bg
@@ -13,8 +17,6 @@ body
   li
     list-style: none
     margin-bottom: 5px
-  #logo
-    float: left
   #container
     width: 960px
     margin: auto
@@ -34,6 +36,7 @@ body
         position: absolute
         left: -960px
     #content
+      @include box-shadow(0 0 10px 5px #000)
       @include clearfix
       position: absolute
       display: none
@@ -63,8 +66,8 @@ body
         width: 40px
         height: 40px
         position: absolute
-        top: 20px
-        right: 20px
+        top: 10px
+        right: 10px
         z-index: 3000
     #nav_bar
       background: transparent
@@ -84,13 +87,14 @@ body
             @include clearfix
             position: absolute
             left: 60px !important
-            margin: 0
-            padding: 0
+            margin: -10px
+            padding: 10px
             .sub_menu_item
               display: block
               float: left
               margin-right: 10px
               a
+                @include box-shadow(0 0 10px 4px #000)
                 font-size: 12px
                 padding: 7px
                 margin: 3px 0px
@@ -108,7 +112,7 @@ body
                 background: white
         ul.nav_bar_container
           margin: 20px 0 0 0
-          padding-top: 10px
+          padding: 17px 10px 6px 0
           float: right
           @include clearfix
         .nav_item
@@ -116,6 +120,7 @@ body
           float: left
           position: relative
           a.item
+            @include box-shadow(0 0 10px 5px #000)
             font-size: 12px
             padding: 7px 10px
             text-transform: uppercase
@@ -145,10 +150,14 @@ legend
         float: left
         width: 80px
         text-align: right
-        padding: 5px
+        padding: 10px
       input[type='text'], input#email, textarea
         width: 240px
         padding: 5px
+        @include box-shadow(inset 0 0 10px #000)
+        @include border-radius(5px)
+        border: 1px solid #000
+        font-size: 120%
       input[type='submit']
         float: right
         @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
@@ -260,17 +269,20 @@ li.none_style
       float: left
       text-align: right
       margin-right: 10px
-      padding-top: 5px
+      padding-top: 10px
     input, textarea
+      border: 1px solid #000
+      @include box-shadow(inset 0 0 10px #000)
+      @include border-radius(5px)
       width: 500px
       padding: 5px
+      font-size: 120%
     input[type='submit']
       float: right
       @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
       width: 100px
       margin-right: 100px
       margin-top: 30px
-
 .service_page_image
   height: 400px
   width: 500px
@@ -278,3 +290,12 @@ li.none_style
 
 .tab_format
   text-align: center
+
+.tools
+  div
+    @include clearfix
+    margin-left: 20px
+    a
+      text-decoration: none
+    .download
+      margin-top: 100px

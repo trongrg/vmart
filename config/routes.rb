@@ -5,7 +5,7 @@ Vmart::Application.routes.draw do
   get '/links' => 'homepage#links'
   get '/services' => 'homepage#services'
   get '/documents' => 'homepage#documents'
-  get '/tools' => 'homepage#tool'
+  get '/tools' => 'homepage#tools'
   get '/brief_outlook' => 'homepage#brief_outlook'
   get '/bank_details' => 'homepage#bank_details'
   get '/consign_a_shipment' => 'homepage#consign_a_shipment'

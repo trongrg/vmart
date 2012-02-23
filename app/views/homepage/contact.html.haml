@@ -16,14 +16,14 @@
         .field_row
           .label
             = label_tag :message, "Message"
-          = text_area_tag :message, "", :size => "10x7"
+          = text_area_tag :message, "", :size => "10x5"
         .field_row
           = submit_tag "Send"
           = submit_tag "Reset"
   .map.left
     %fieldset
       %legend Our location
-      = image_tag("http://maps.googleapis.com/maps/api/staticmap?center=10.783923,106.709003&zoom=12&size=450x268&sensor=false&markers=color:blue%7Clabel:1%7C10.760037,106.70019&markers=color:red%7Clabel:2%7C10.807012,106.71875", :alt => "gmap")
+      = image_tag("http://maps.googleapis.com/maps/api/staticmap?center=10.783923,106.709003&zoom=12&size=450x288&sensor=false&markers=color:blue%7Clabel:1%7C10.760037,106.70019&markers=color:red%7Clabel:2%7C10.807012,106.71875", :alt => "gmap")
 .addresses
   .address.left
     %a{:href => "http://www.google.com/mapmaker?gw=55&ll=10.761937,106.701837&spn=0.034909,0.061626&z=15&vpid=1329566100219&hl=en&iwloc=2_0&editids=hhLLw7utKUmwObCffX&lyt=large_map", :target => "_blank"}

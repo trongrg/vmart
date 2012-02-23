@@ -1,43 +1,82 @@
-%fieldset
-  %legend Quota
-  = form_tag "/quota" do
-    .field_row
-      .label
-        = label_tag :name
-      = text_field_tag :name
-    .field_row
-      .label
-        = label_tag :company_name
-      = text_field_tag :company_name
-    .field_row
-      .label
-        = label_tag :company_address
-      = text_area_tag :company_address
-    .field_row
-      .label
-        = label_tag :telephone
-      = text_field_tag :telephone
-    .field_row
-      .label
-        = label_tag :name
-      = text_field_tag :name
-    .field_row
-      .label
-        = label_tag :name
-      = text_field_tag :name
-    .field_row
-      .label
-        = label_tag :name
-      = text_field_tag :name
-    .field_row
-      .label
-        = label_tag :name
-      = text_field_tag :name
-    .field_row
-      .label
-        = label_tag :name
-      = text_field_tag :name
-    .field_row
-      .label
-        = label_tag :name
-      = text_field_tag :name
+.quote
+  %fieldset
+    %legend Quote
+    = form_tag "/quote" do
+      .field_row
+        %h3 CONTACT DETAILS
+      .field_row
+        .label
+          = label_tag :name
+        = text_field_tag :name
+      .field_row
+        .label
+          = label_tag :company_name
+        = text_field_tag :company_name
+      .field_row
+        .label
+          = label_tag :company_address
+        = text_area_tag :company_address
+      .field_row
+        .label
+          = label_tag :telephone
+        = text_field_tag :telephone
+      .field_row
+        .label
+          = label_tag :fax
+        = text_field_tag :fax
+      .field_row
+        .label
+          = label_tag :email
+        = text_field_tag :email
+      .field_row
+        %h3 CONSIGNMENT DETAILS
+      .field_row
+        .label
+          = label_tag :commodity
+        = text_field_tag :commodity
+      .field_row
+        .label
+          = label_tag :weight, "Weigth (Kg)"
+        = text_field_tag :weigth
+      .field_row
+        .label
+          = label_tag :volume, "Volume (m3)"
+        = text_field_tag :volume
+      .field_row
+        .label
+          = label_tag :pieces, "No. of Pieces"
+        = text_field_tag :pieces
+      .field_row
+        .label
+          = label_tag :value
+        = text_field_tag :value
+      .field_row
+        .label
+          = label_tag :transport_mode, "Mode of Transport"
+        = text_field_tag :transport_mode
+      .field_row
+        .label
+          = label_tag :hazarduous, "Is this cargo classified as hazardous?"
+        = check_box_tag :hararduous
+      .field_row
+        %h3 COLLECTION
+      .field_row
+        .label
+          = label_tag :collection_address
+        = text_field_tag :collection_address
+      .field_row
+        .label
+          = label_tag :collection_date, "Date for Collection"
+        = text_field_tag :collection_date
+      .field_row
+        %h3 DELIVERY
+      .field_row
+        .label
+          = label_tag :delivery_address
+        = text_field_tag :delivery_address
+      .field_row
+        .label
+          = label_tag :delivery_date, "Date for Delivery"
+        = text_field_tag :delivery_date
+      .field_row
+        = submit_tag "SEND"

@@ -39,7 +39,7 @@ body
       display: none
       background: black
       height: 600px
-      opacity: 0.85
+      @include opacity(0.85)
       margin: auto
       color: silver
       @include border-radius(15px)
@@ -100,7 +100,7 @@ body
                 background: #fa7121
               a:hover
                 background: black
-                opacity: 0.8
+                @include opacity(0.8)
                 color: #fa7121
                 background: white
         ul.nav_bar_container
@@ -172,7 +172,7 @@ legend
 #link_image
   height: 400px
   width: 400px
-  border-radius: 10px
+  @include border-radius(10px)
 
 .useful_link
   font-size: 20px
@@ -190,7 +190,7 @@ legend
     float: left
 
 fieldset
-  border-radius: 10px
+  @include border-radius(10px)
 
 #download
   height: 60px
@@ -208,11 +208,10 @@ fieldset
 #document_image
   height: 200px
   width: 200px
-  border-radius: 5px
+  @include border-radius(5px)
 
 .invoice_link
   a
-    style-list: none
     color: white
     font-size: 17px
 li.none_style
@@ -244,3 +243,27 @@ li.none_style
 #orange_center
   color: orange
   text-align: center
+
+.news
+  .links
+    margin-left: 20px
+    a
+      color: white
+      font-size: 17px
+
+.quote
+  .field_row
+    @include clearfix
+    .label
+      width: 250px
+      float: left
+      text-align: right
+      margin-right: 10px
+    input, textarea
+      width: 500px
+    input[type='submit']
+      float: right
+      @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
+      width: 100px
+      margin-right: 100px
+      margin-top: 30px

@@ -14,6 +14,7 @@ Vmart::Application.routes.draw do
   get '/air_freight' => 'homepage#air_freight'
   get '/pickup_delivery' => 'homepage#pickup_delivery'
   get '/consolidation_warehouse' => 'homepage#consolidation_warehouse'
-  get 'heavy_lift' => 'homepage#heavy_lift'
-  get 'removal_packing' => 'homepage#removal_packing'
+  get '/heavy_lift' => 'homepage#heavy_lift'
+  get '/removal_packing' => 'homepage#removal_packing'
+  get '/quote' => 'homepage#quote'
 end

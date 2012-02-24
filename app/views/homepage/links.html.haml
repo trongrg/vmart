@@ -2,7 +2,7 @@
   %legend
     Useful Links
   .container
-    %img.left#link_image{:src => "assets/links.jpg"}
+    = link_to image_tag("links.jpg", :id => "link_image", :class => "left"), "http://google.com", :target => "_blank"
     %ul.left.useful_link
       %li
         = image_tag "links/currency.png", :size => "35x35"

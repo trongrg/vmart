@@ -1,3 +1,23 @@
+jQuery.fn.serializeObject = ->
+  arrayData = @serializeArray()
+  objectData = {}
+
+  $.each arrayData, ->
+    if @value?
+      value = @value
+    else
+      value = ''
+
+    if objectData[@name]?
+      unless objectData[@name].push
+        objectData[@name] = [objectData[@name]]
+
+      objectData[@name].push value
+    else
+      objectData[@name] = value
+
+  return objectData
+
 $(document).ready ->
   $(".tail_bg, .bot_bg").css("min-height", window.innerHeight)
 
@@ -172,6 +192,22 @@ $(document).ready ->
       200
     )
 
+
   $("#nav_bar .sub_menu").mouseenter (e) ->
     $sub_menu = $(e.currentTarget)
     clearTimeout($(document).data[$sub_menu.attr('item')])
+
+  $("#contact_form").submit (e) ->
+    alert("submit")
+    e.preventDefault()
+    $.ajax(
+      url: $(this).attr("action")
+      type: $(this).attr("method")
+      data: $(this).serializeObject()
+      success: (data)->
+        alert("Thank you")
+    )
+    return false
+  $("input[type='submit']").click (e) ->
+    alert("submit")
+

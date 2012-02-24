@@ -1,7 +1,7 @@
 .quote
   %fieldset
     %legend Quote
-    = form_tag "/quote" do
+    = form_tag "/quote", :id => "quote_form" do
       .field_row
         Please complete the form below to obtain fast, accurate advice on your shipment and pricing from the country of origin.
       .field_row
@@ -82,3 +82,19 @@
         = text_field_tag :delivery_date
       .field_row
         = submit_tag "SEND"
+
+:coffeescript
+  $(document).ready () ->
+    $("#quote_form").submit (e) ->
+      e.preventDefault()
+      $.ajax(
+        url: $(this).attr("action")
+        type: $(this).attr("method")
+        data: $(this).serializeObject()
+        success: (data) ->
+          alert(data)
+        error: (data) ->
+          alert(data)
+      )
+      return false
+

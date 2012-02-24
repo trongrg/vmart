@@ -1,6 +1,6 @@
 .contact_map
   .contact_form_container.left
-    = form_tag '/contact' do
+    = form_tag '/contact', :id => "contact_form" do
       %fieldset
         %legend Contact Us
         .field_row.tool_tip
@@ -68,3 +68,21 @@
     %p
       = "Mr. Henry: #{link_to "henry@vmartlogistics.com.vn", "mailto:henry@vmartlogistics.com.vn"}".html_safe
       Logistics
+
+:coffeescript
+  $(document).ready ()->
+    $("#contact_form").submit (e) ->
+      e.preventDefault()
+      $.ajax(
+        url: $(this).attr("action")
+        type: $(this).attr("method")
+        data: $(this).serializeObject()
+        success: (data) ->
+          console.log(data)
+          alert(data)
+        error: (data) ->
+          console.log(data)
+          alert(data)
+      )
+      return false
+

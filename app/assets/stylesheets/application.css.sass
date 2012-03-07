@@ -6,6 +6,7 @@
 @import 'sassy-buttons'
 body
   margin: 0
+  font-family: 'Georgia Pro', Georgia, sans-serif
   #logo
     float: left
   .tail_bg
@@ -19,38 +20,47 @@ body
   #container
     width: 960px
     margin: auto
-    font-family: Bebas, Helvetica, sans-serif
     @include clearfix
     #content_surrogate
-      height: 500px
+      height: 600px
       margin: 50px auto
       position: relative
       overflow: hidden
       padding: 20px
       .truck
-        background: url("running-truck.png") no-repeat center
+        background: url("cargo_ship2.png") no-repeat center
         display: none
         width: 960px
-        height: 500px
+        height: 600px
         position: absolute
         left: -960px
     #content
-      @include box-shadow(0 0 10px 5px #000)
+      //@include box-shadow(0 0 10px 5px #2db5e1)
       @include clearfix
       position: absolute
       display: none
-      background: black
-      height: 500px
-      @include opacity(0.85)
+      background: url('box-tail.png') repeat transparent
+      //@include linear-gradient(#74d3f3, #2db5e1)
+      height: 600px
+      //@include opacity(0.85)
       margin: auto
-      color: silver
+      color: #3C4346
       @include border-radius(15px)
       width: 880px
       padding: 50px 20px 20px 20px
       z-index: 10
+      .close_btn
+        background: url("close_btn.png")
+        width: 40px
+        height: 40px
+        position: absolute
+        top: 10px
+        right: 10px
+        z-index: 30
       .ajax_content
-        height: 460px
-        width: 920px
+        height: 560px
+        width: 940px
+        padding-right: 20px
         position: absolute
         overflow: auto
         h1
@@ -60,14 +70,6 @@ body
         .orange_center
           color: orange
           text-align: center
-      .close_btn
-        background: url("close_btn.png")
-        width: 40px
-        height: 40px
-        position: absolute
-        top: 10px
-        right: 10px
-        z-index: 30
     header
       padding-top: 50px
       #nav_bar
@@ -147,9 +149,9 @@ legend
       input[type='text'], input#email, textarea
         width: 240px
         padding: 5px
-        @include box-shadow(inset 0 0 10px #000)
+        @include box-shadow(inset 0 0 10px #d1eaf7)
         @include border-radius(5px)
-        border: 1px solid #000
+        border: 1px solid #32A7BF
         font-size: 120%
       input[type='submit']
         float: right
@@ -158,16 +160,14 @@ legend
     width: 400px
     height: 326px
     margin-left: 20px
+a
+  text-decoration: none
+  color: #1B5F9F
+  &:hover
+    color: #CB0202
 .addresses
   .address
     width: 300px
-    a
-      text-decoration: none
-      color: gray
-      h3
-        color: #fa7121
-      p
-        font-size: 14px
     p
       font-size: 14px
 .left
@@ -189,8 +189,6 @@ legend
     float: left
     margin-right: 5px
   a
-    color: yellow
-    text-decoration: none
     display: block
     padding-top: 5px
     float: left
@@ -218,7 +216,6 @@ fieldset
 
 .invoice_link
   a
-    color: white
     font-size: 17px
 li.none_style
   margin-bottom: 20px
@@ -250,7 +247,6 @@ li.none_style
   .links
     margin-left: 20px
     a
-      color: white
       font-size: 17px
 
 .quote
@@ -264,9 +260,9 @@ li.none_style
       margin-right: 10px
       padding-top: 10px
     input, textarea
-      border: 1px solid #000
-      @include box-shadow(inset 0 0 10px #000)
+      @include box-shadow(inset 0 0 10px #d1eaf7)
       @include border-radius(5px)
+      border: 1px solid #32A7BF
       width: 500px
       padding: 5px
       font-size: 120%

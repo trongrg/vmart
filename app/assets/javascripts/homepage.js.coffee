@@ -110,7 +110,7 @@ $(document).ready ->
         }
       )
   $("#content .close_btn").click (e) ->
-    $target = $("#nav_bar .nav_item .active")
+    $target = $("#nav_bar .nav_item>.active")
     if ($target.length == 0)
       $target = $("#nav_bar .nav_item a:first")
     top = "-=" + ($("#content_surrogate").offset().top - $target.offset().top - 25).toString() + "px"

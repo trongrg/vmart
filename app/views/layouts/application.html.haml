@@ -9,50 +9,48 @@
       .top_bg
         .bot_bg
           .container_12
-            #container.grid_12
-              %header
-                #nav_bar
-                  #logo
-                    = image_tag ("Logo_V-Mart.png")
-                  %nav
-                    %ul.nav_bar_container
-                      %li.nav_item
-                        = link_to "About Us", "/about"
-                        %ul.sub_menu
-                          %li.sub_menu_item
-                            = link_to "Brief Outlook", "/brief_outlook"
-                          %li.sub_menu_item
-                            = link_to "Consign A Shipment", "/consign_a_shipment"
-                          %li.sub_menu_item
-                            = link_to "Bank Details", "/bank_details"
-                      %li.nav_item
-                        = link_to "Services", "/services"
-                        %ul.sub_menu
-                          %li.sub_menu_item
-                            = link_to "Sea Freight", "/sea_freight"
-                          %li.sub_menu_item
-                            = link_to "Air Freight", "/air_freight"
-                          %li.sub_menu_item
-                            = link_to "Pickup/Delivery".html_safe, "/pickup_delivery"
-                          %li.sub_menu_item
-                            = link_to "Consolidation/Warehouse".html_safe, "/consolidation_warehouse"
-                          %li.sub_menu_item
-                            = link_to "Heavy Lift", "/heavy_lift"
-                          %li.sub_menu_item
-                            = link_to "Removal/Packing", "/removal_packing"
-                      %li.nav_item
-                        = link_to "Tools", "/tools"
-                      %li.nav_item
-                        = link_to "Links", "/links"
-                      %li.nav_item
-                        = link_to "Documents", "/documents"
-                      %li.nav_item
-                        = link_to "News", "/news"
-                      %li.nav_item
-                        = link_to "Contact", "/contact"
-                      %li.nav_item.last_item
-                        = link_to "Quote", "/quote"
-                    %div{ :style => "clear:both" }
+            #container
+              #nav_bar
+                #logo
+                  = image_tag ("Logo_V-Mart.png")
+                %ul.nav_bar_container
+                  %li.nav_item
+                    = link_to "About Us", "/about"
+                    %ul.sub_menu
+                      %li.sub_menu_item
+                        = link_to "Brief Outlook", "/brief_outlook"
+                      %li.sub_menu_item
+                        = link_to "Consign A Shipment", "/consign_a_shipment"
+                      %li.sub_menu_item
+                        = link_to "Bank Details", "/bank_details"
+                  %li.nav_item
+                    = link_to "Services", "/services"
+                    %ul.sub_menu
+                      %li.sub_menu_item
+                        = link_to "Sea Freight", "/sea_freight"
+                      %li.sub_menu_item
+                        = link_to "Air Freight", "/air_freight"
+                      %li.sub_menu_item
+                        = link_to "Pickup/Delivery".html_safe, "/pickup_delivery"
+                      %li.sub_menu_item
+                        = link_to "Consolidation/Warehouse".html_safe, "/consolidation_warehouse"
+                      %li.sub_menu_item
+                        = link_to "Heavy Lift", "/heavy_lift"
+                      %li.sub_menu_item
+                        = link_to "Removal/Packing", "/removal_packing"
+                  %li.nav_item
+                    = link_to "Tools", "/tools"
+                  %li.nav_item
+                    = link_to "Links", "/links"
+                  %li.nav_item
+                    = link_to "Documents", "/documents"
+                  %li.nav_item
+                    = link_to "News", "/news"
+                  %li.nav_item
+                    = link_to "Contact", "/contact"
+                  %li.nav_item.last_item
+                    = link_to "Quote", "/quote"
+                %div{ :style => "clear:both" }
               #content
                 .close_btn
                 .ajax_content

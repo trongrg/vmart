@@ -70,66 +70,66 @@ body
         .orange_center
           color: orange
           text-align: center
-    header
+    #nav_bar
       padding-top: 50px
-      #nav_bar
-        ul.nav_bar_container
-          float: right
-          @include clearfix
-          @include border-radius(10px)
-          background: white
-          padding: 0
+      ul.nav_bar_container
+        float: right
+        @include clearfix
+        @include border-radius(10px)
+        background: white
+        padding: 0
+        position: relative
+        overflow: visible
+        //@include box-shadow(0 0 10px 5px #000)
+        .nav_item
+          padding: 15px
+          margin: 0
+          float: left
+          background: url("/assets/menu_separator.gif") right 0 no-repeat
           position: relative
-          overflow: visible
-          //@include box-shadow(0 0 10px 5px #000)
-          .nav_item
-            padding: 15px
-            margin: 0
-            float: left
-            background: url("/assets/menu_separator.gif") right 0 no-repeat
-            position: relative
-            line-height: 20px
-            &:hover
-              .sub_menu
-                top: 51px
-          .nav_item.last_item
-            background: none
+          line-height: 20px
           a
             color: #708389
             font-size: 15px
             text-transform: uppercase
-            &:hover
-              color: #0CA3D0
           a.active
             color: #0CA3D0
-          .sub_menu
-            position: absolute
-            left: 0
-            top: 51px
-            padding: 0
-            z-index: 20
-            width: 200px
-            .sub_menu_item
-              background: white
-              border: 1px solid #DFE5E8
-              width: 150px
-              padding: 0px 5px
-              margin-bottom: 1px
-              margin-right: 5px
-              @include border-radius(10px)
-              position: relative
-              float: left
+          &:hover
+            .sub_menu
+              top: 51px
+            cursor: pointer
+            >a
+              color: #0CA3D0
+        .nav_item.last_item
+          background: none
+        .sub_menu
+          position: absolute
+          left: 0
+          top: 51px
+          padding: 0
+          z-index: 20
+          width: 200px
+          .sub_menu_item
+            background: white
+            border: 1px solid #DFE5E8
+            width: 150px
+            padding: 0px 5px
+            margin-bottom: 1px
+            margin-right: 5px
+            @include border-radius(10px)
+            position: relative
+            float: left
+            &:hover
+              background: #32A7BF
+            a
+              font-size: 12px
+              padding: 7px
+              margin: 3px 0px
+              text-transform: uppercase
+              text-decoration: none
+              @include border-radius(12px)
               &:hover
-                background: #32A7BF
-              a
-                font-size: 12px
-                padding: 7px
-                margin: 3px 0px
-                text-transform: uppercase
-                text-decoration: none
-                @include border-radius(12px)
-                &:hover
-                  color: white
+                color: white
 
 legend
   font-size: 32px
@@ -167,7 +167,7 @@ a
     color: #CB0202
 .addresses
   .address
-    width: 300px
+    width: 450px
     p
       font-size: 14px
 .left
@@ -291,3 +291,7 @@ li.none_style
 
 *
   outline: none
+
+.cufon-replacing
+  *
+    visibility: visible !important

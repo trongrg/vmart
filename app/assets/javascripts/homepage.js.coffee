@@ -19,7 +19,13 @@ jQuery.fn.serializeObject = ->
   return objectData
 
 $(document).ready ->
-  $("ul.nav_bar_container").superfish()
+  $("ul.nav_bar_container").superfish(
+    delay: 1000
+    animation: {opacity: 'show', height: 'show'}
+    autoArrows: false
+    dropShadows: true
+    disableHI: true
+  )
   $("#nav_bar .nav_item a, #nav_bar .sub_menu_item a").click (e) ->
     e.preventDefault()
     if ($("#flash").is(":visible"))
@@ -27,7 +33,7 @@ $(document).ready ->
     url = $(this).attr("href")
     #do nothing if the link is already active
     if $(this).is(".active")
-      return
+      return false
     #change active link
     $("#nav_bar .active").removeClass("active")
     $(this).addClass("active")

@@ -29,18 +29,14 @@
     %a{:href => "http://www.google.com/mapmaker?gw=55&ll=10.761937,106.701837&spn=0.034909,0.061626&z=15&vpid=1329566100219&hl=en&iwloc=2_0&editids=hhLLw7utKUmwObCffX&lyt=large_map", :target => "_blank"}
       %h3 1. Head office
       %p
-        115 C1, C/C P6, Tan Vinh, Ward 6, District 4,
+        115 C1, C/C P6, Tan Vinh, Ward 6, District 4, Ho Chi Minh City,
         %br
-        Ho Chi Minh City, VietNam
+        VietNam
+        %br
       %p
         Tel: + 84 8 389911 36 - 37 - 38
         %br
         Fax: + 84 8 38991156
-    %p
-      %br
-      = "Mr. John: #{link_to "john@vmartlogistics.com.vn", "mailto:john@vmartlogistics.com.vn"}".html_safe
-      %br
-      Executive Director
 
   .address.left
     %a{:href => "http://www.google.com/mapmaker?iwloc=0_0&gw=55&editids=hhLLw7utKUmwObCffX&ll=10.760461,106.700206&spn=0.017455,0.030813&z=16&lyt=large_map&htll=10.760037,106.70019", :target => "_blank"}
@@ -51,24 +47,9 @@
         %br
         Fax: + 84 8 38991156
     %p
-      = "Mr. Kent: #{link_to "kent@vmartlogistics.com.vn", "mailto:kent@vmartlogistics.com.vn"}".html_safe
-      %br
-      Managing Director
-
-  .address.left
-    %h3 3. Departments
-    %p
-      = "Ms. Lucia: #{link_to "lucia@vmartlogistics.com.vn", "mailto:lucia@vmartlogistics.com.vn"}".html_safe
-      %br
-      Inbound/Outbound
-    %p
-      = "Ms. Linda: #{link_to "linda@vmartlogistics.com.vn", "mailto:lucia@vmartlogistics.com.vn"}".html_safe
-      %br
-      Sales &amp; Marketing
-    %p
-      = "Mr. Henry: #{link_to "henry@vmartlogistics.com.vn", "mailto:henry@vmartlogistics.com.vn"}".html_safe
-      Logistics
-= javascript_include_tag 'cufon-replace'
+      Email:
+      = link_to "info@vmartlogistics.com.vn", "mailto:info@vmartlogistics.com.vn"
+= javascript_include_tag 'cufon-refresh'
 :coffeescript
   $(document).ready ()->
     $("#contact_form").submit (e) ->
@@ -85,4 +66,3 @@
           alert(data)
       )
       return false
-

@@ -56,6 +56,7 @@ body
       @include border-radius(15px)
       width: 880px
       padding: 50px 20px 20px 20px
+      behaviour: url('ie-css3.htc')
       z-index: 10
       .close_btn
         background: url("close_btn.png")
@@ -88,7 +89,7 @@ body
         padding: 0
         position: relative
         overflow: visible
-        //@include box-shadow(0 0 10px 5px #000)
+        behaviour: url('ie-css3.htc')
         .nav_item
           padding: 15px
           margin: 0
@@ -127,6 +128,7 @@ body
             @include border-radius(10px)
             position: relative
             float: left
+            behaviour: url('ie-css3.htc')
             &:hover
               background: #32A7BF
             a
@@ -136,6 +138,7 @@ body
               text-transform: uppercase
               text-decoration: none
               @include border-radius(12px)
+              behaviour: url('ie-css3.htc')
               &:hover
                 color: white
 
@@ -161,9 +164,11 @@ legend
         @include border-radius(5px)
         border: 1px solid #32A7BF
         font-size: 120%
+        behaviour: url('ie-css3.htc')
       input[type='submit']
         float: right
         @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
+        behaviour: url('ie-css3.htc')
   .map
     width: 500px
     height: 326px
@@ -187,6 +192,7 @@ a
   height: 400px
   width: 400px
   @include border-radius(10px)
+  behaviour: url('ie-css3.htc')
 
 .useful_link
   font-size: 20px
@@ -203,6 +209,7 @@ a
 
 fieldset
   @include border-radius(10px)
+  behaviour: url('ie-css3.htc')
 
 #download
   height: 60px
@@ -221,6 +228,8 @@ fieldset
   height: 200px
   width: 200px
   @include border-radius(5px)
+  behaviour: url('ie-css3.htc')
+
 
 .invoice_link
   a
@@ -274,12 +283,16 @@ li.none_style
       width: 500px
       padding: 5px
       font-size: 120%
+      behaviour: url('ie-css3.htc')
+
     input[type='submit']
       float: right
       @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
       width: 200px
       margin-right: 100px
       margin-top: 30px
+      behaviour: url('ie-css3.htc')
+
 .service_page_image
   height: 400px
   width: 500px

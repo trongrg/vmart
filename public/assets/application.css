@@ -1,0 +1,578 @@
+/* */
+/* line 6, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body {
+  margin: 0;
+  font-family: "Georgia Pro", Georgia, sans-serif;
+}
+/* line 9, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #logo {
+  float: left;
+}
+/* line 11, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body .tail_bg {
+  background: url(tail-bg2.png) repeat-y left top;
+}
+/* line 13, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body .tail_bg .bot_bg {
+  min-height: 1000px;
+  background: url(site_bg.jpg) no-repeat left bottom;
+}
+/* line 16, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+/* line 19, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container {
+  width: 960px;
+  margin: auto;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 23, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #content_surrogate {
+  height: 600px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+/* line 29, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #content_surrogate .cargo_ship {
+  background: url("cargo_ship.png") no-repeat center;
+  display: none;
+  width: 960px;
+  height: 600px;
+  position: absolute;
+  left: -960px;
+}
+/* line 36, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #content_surrogate .close_btn {
+  background: url("close_btn.png");
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  z-index: 1;
+}
+/* line 44, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #content {
+  overflow: hidden;
+  *zoom: 1;
+  position: absolute;
+  display: none;
+  background: url("box-tail.png") repeat transparent;
+  height: 600px;
+  margin: auto;
+  color: #3c4346;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  width: 880px;
+  padding: 50px 20px 20px 20px;
+  behaviour: url("ie-css3.htc");
+  z-index: 10;
+}
+/* line 60, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #content .close_btn {
+  background: url("close_btn.png");
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 30;
+}
+/* line 68, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #content .ajax_content {
+  height: 560px;
+  width: 940px;
+  padding-right: 20px;
+  position: absolute;
+  overflow: auto;
+}
+/* line 74, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #content .ajax_content h1 {
+  color: silver;
+}
+/* line 76, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #content .ajax_content h2, body #container #content .ajax_content h3 {
+  color: #fa7121;
+}
+/* line 78, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #content .ajax_content .orange_center {
+  color: orange;
+  text-align: center;
+}
+/* line 81, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar {
+  padding-top: 50px;
+}
+/* line 83, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container {
+  float: right;
+  overflow: hidden;
+  *zoom: 1;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background: orange;
+  padding: 0;
+  position: relative;
+  overflow: visible;
+  behaviour: url("ie-css3.htc");
+}
+/* line 92, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .nav_item {
+  padding: 15px;
+  margin: 0;
+  float: left;
+  background: url("/assets/menu_separator.png") right 0 no-repeat;
+  position: relative;
+  line-height: 20px;
+}
+/* line 99, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .nav_item a {
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+/* line 103, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .nav_item a.active {
+  color: #0ca3d0;
+}
+/* line 105, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .nav_item:hover {
+  cursor: pointer;
+}
+/* line 106, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .nav_item:hover .sub_menu {
+  top: 51px;
+}
+/* line 109, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .nav_item:hover > a {
+  color: #0ca3d0;
+}
+/* line 111, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .nav_item.last_item {
+  background: none;
+}
+/* line 113, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .sub_menu {
+  position: absolute;
+  left: 0;
+  top: 51px;
+  padding: 0;
+  z-index: 20;
+  width: 200px;
+}
+/* line 120, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .sub_menu .sub_menu_item {
+  background: orange;
+  border: 1px solid #dfe5e8;
+  width: 150px;
+  padding: 0px 5px;
+  margin-bottom: 1px;
+  margin-right: 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  float: left;
+  behaviour: url("ie-css3.htc");
+}
+/* line 131, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .sub_menu .sub_menu_item:hover {
+  background: #32a7bf;
+}
+/* line 133, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .sub_menu .sub_menu_item a {
+  font-size: 12px;
+  padding: 7px;
+  margin: 3px 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  behaviour: url("ie-css3.htc");
+}
+/* line 141, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+body #container #nav_bar ul.nav_bar_container .sub_menu .sub_menu_item a:hover {
+  color: white;
+}
+
+/* line 144, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+legend {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+/* line 148, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.contact_map {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 150, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.contact_map .contact_form_container {
+  width: 400px;
+}
+/* line 152, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.contact_map .contact_form_container .field_row {
+  margin: 5px;
+}
+/* line 154, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.contact_map .contact_form_container .field_row .label {
+  float: left;
+  width: 80px;
+  text-align: right;
+  padding: 10px;
+}
+/* line 159, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.contact_map .contact_form_container .field_row input[type='text'], .contact_map .contact_form_container .field_row input#email, .contact_map .contact_form_container .field_row textarea {
+  width: 240px;
+  padding: 5px;
+  -webkit-box-shadow: inset 0 0 10px #d1eaf7;
+  -moz-box-shadow: inset 0 0 10px #d1eaf7;
+  box-shadow: inset 0 0 10px #d1eaf7;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #32a7bf;
+  font-size: 120%;
+  behaviour: url("ie-css3.htc");
+}
+/* line 167, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.contact_map .contact_form_container .field_row input[type='submit'] {
+  float: right;
+  font-size: 16px;
+  padding: 0.3em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.5;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  background-color: #ff8a1a;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcb9a), color-stop(50%, #ff8a1a), color-stop(100%, #ff8a1a));
+  background: -webkit-linear-gradient(#ffcb9a, #ff8a1a 50%, #ff8a1a);
+  background: -moz-linear-gradient(#ffcb9a, #ff8a1a 50%, #ff8a1a);
+  background: -o-linear-gradient(#ffcb9a, #ff8a1a 50%, #ff8a1a);
+  background: -ms-linear-gradient(#ffcb9a, #ff8a1a 50%, #ff8a1a);
+  background: linear-gradient(#ffcb9a, #ff8a1a 50%, #ff8a1a);
+  -webkit-box-shadow: #fff2e6 0 1px 0 inset;
+  -moz-box-shadow: #fff2e6 0 1px 0 inset;
+  box-shadow: #fff2e6 0 1px 0 inset;
+  border: 1px solid #ff7d00;
+  color: white;
+  text-shadow: #f37700 0 -1px 0;
+  behaviour: url("ie-css3.htc");
+}
+/* line 16, /Volumes/DataMacOSX/Users/tr0ngrg/.rvm/gems/ruby-1.9.3-p0/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.contact_map .contact_form_container .field_row input[type='submit']:hover {
+  background-color: #ff8a1a;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffc68f), color-stop(50%, #ff8a1a), color-stop(100%, #f07500));
+  background: -webkit-linear-gradient(#ffc68f, #ff8a1a 50%, #f07500);
+  background: -moz-linear-gradient(#ffc68f, #ff8a1a 50%, #f07500);
+  background: -o-linear-gradient(#ffc68f, #ff8a1a 50%, #f07500);
+  background: -ms-linear-gradient(#ffc68f, #ff8a1a 50%, #f07500);
+  background: linear-gradient(#ffc68f, #ff8a1a 50%, #f07500);
+}
+/* line 19, /Volumes/DataMacOSX/Users/tr0ngrg/.rvm/gems/ruby-1.9.3-p0/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.contact_map .contact_form_container .field_row input[type='submit']:active {
+  -webkit-box-shadow: #f07500 0 1px 2px inset;
+  -moz-box-shadow: #f07500 0 1px 2px inset;
+  box-shadow: #f07500 0 1px 2px inset;
+}
+/* line 171, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.contact_map .map {
+  width: 500px;
+  height: 326px;
+  margin-left: 20px;
+}
+
+/* line 175, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+a {
+  text-decoration: none;
+  color: #1b5f9f;
+}
+/* line 178, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+a:hover {
+  color: #cb0202;
+}
+
+/* line 181, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.addresses .address {
+  width: 450px;
+}
+/* line 183, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.addresses .address p {
+  font-size: 14px;
+}
+
+/* line 185, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.left {
+  float: left;
+}
+
+/* line 187, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.right {
+  float: right;
+}
+
+/* line 190, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+#link_image {
+  height: 400px;
+  width: 400px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  behaviour: url("ie-css3.htc");
+}
+
+/* line 196, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.useful_link {
+  font-size: 20px;
+  margin-top: 10px;
+}
+/* line 199, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.useful_link li {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 201, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.useful_link img {
+  float: left;
+  margin-right: 5px;
+}
+/* line 204, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.useful_link a {
+  display: block;
+  padding-top: 5px;
+  float: left;
+}
+
+/* line 209, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+fieldset {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  behaviour: url("ie-css3.htc");
+}
+
+/* line 213, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+#download {
+  height: 60px;
+  margin-left: 30px;
+}
+
+/* line 217, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+#services_link {
+  height: 400px;
+  width: 500px;
+  margin-left: 150px;
+  border: 20px;
+}
+
+/* line 223, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.container {
+  margin: 5px;
+}
+
+/* line 226, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+#document_image {
+  height: 200px;
+  width: 200px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  behaviour: url("ie-css3.htc");
+}
+
+/* line 234, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.invoice_link a {
+  font-size: 17px;
+}
+
+/* line 236, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+li.none_style {
+  margin-bottom: 20px;
+  list-style: none;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 240, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+li.none_style .left {
+  margin-right: 20px;
+}
+
+/* line 243, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.left_relative {
+  left: 10px;
+  position: relative;
+}
+
+/* line 248, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.about_us ul li {
+  list-style: none;
+  margin: 10px;
+}
+/* line 251, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.about_us ul li strong {
+  color: red;
+}
+
+/* line 255, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.consign_shipment p {
+  margin-left: 30px;
+}
+
+/* line 258, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.services div {
+  margin-left: 20px;
+  margin-right: 40px;
+}
+
+/* line 263, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.news .links {
+  margin-left: 20px;
+}
+/* line 265, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.news .links a {
+  font-size: 17px;
+}
+
+/* line 269, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.quote .field_row {
+  margin: 5px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 272, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.quote .field_row .label {
+  width: 250px;
+  float: left;
+  text-align: right;
+  margin-right: 10px;
+  padding-top: 10px;
+}
+/* line 278, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.quote .field_row input, .quote .field_row textarea {
+  -webkit-box-shadow: inset 0 0 10px #d1eaf7;
+  -moz-box-shadow: inset 0 0 10px #d1eaf7;
+  box-shadow: inset 0 0 10px #d1eaf7;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #32a7bf;
+  width: 500px;
+  padding: 5px;
+  font-size: 120%;
+  behaviour: url("ie-css3.htc");
+}
+/* line 287, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.quote .field_row input[type='submit'] {
+  float: right;
+  font-size: 16px;
+  padding: 0.3em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.5;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  background-color: #ff8a1a;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcb9a), color-stop(50%, #ff8a1a), color-stop(100%, #ff8a1a));
+  background: -webkit-linear-gradient(#ffcb9a, #ff8a1a 50%, #ff8a1a);
+  background: -moz-linear-gradient(#ffcb9a, #ff8a1a 50%, #ff8a1a);
+  background: -o-linear-gradient(#ffcb9a, #ff8a1a 50%, #ff8a1a);
+  background: -ms-linear-gradient(#ffcb9a, #ff8a1a 50%, #ff8a1a);
+  background: linear-gradient(#ffcb9a, #ff8a1a 50%, #ff8a1a);
+  -webkit-box-shadow: #fff2e6 0 1px 0 inset;
+  -moz-box-shadow: #fff2e6 0 1px 0 inset;
+  box-shadow: #fff2e6 0 1px 0 inset;
+  border: 1px solid #ff7d00;
+  color: white;
+  text-shadow: #f37700 0 -1px 0;
+  width: 200px;
+  margin-right: 100px;
+  margin-top: 30px;
+  behaviour: url("ie-css3.htc");
+}
+/* line 16, /Volumes/DataMacOSX/Users/tr0ngrg/.rvm/gems/ruby-1.9.3-p0/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.quote .field_row input[type='submit']:hover {
+  background-color: #ff8a1a;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffc68f), color-stop(50%, #ff8a1a), color-stop(100%, #f07500));
+  background: -webkit-linear-gradient(#ffc68f, #ff8a1a 50%, #f07500);
+  background: -moz-linear-gradient(#ffc68f, #ff8a1a 50%, #f07500);
+  background: -o-linear-gradient(#ffc68f, #ff8a1a 50%, #f07500);
+  background: -ms-linear-gradient(#ffc68f, #ff8a1a 50%, #f07500);
+  background: linear-gradient(#ffc68f, #ff8a1a 50%, #f07500);
+}
+/* line 19, /Volumes/DataMacOSX/Users/tr0ngrg/.rvm/gems/ruby-1.9.3-p0/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.quote .field_row input[type='submit']:active {
+  -webkit-box-shadow: #f07500 0 1px 2px inset;
+  -moz-box-shadow: #f07500 0 1px 2px inset;
+  box-shadow: #f07500 0 1px 2px inset;
+}
+
+/* line 295, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.service_page_image {
+  height: 400px;
+  width: 500px;
+  margin-left: 10px;
+}
+
+/* line 300, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.tab_format {
+  text-align: center;
+}
+
+/* line 304, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.tools div {
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 20px;
+}
+/* line 307, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.tools div a {
+  text-decoration: none;
+}
+/* line 309, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.tools div .download {
+  margin-top: 100px;
+}
+
+/* line 312, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+* {
+  outline: none;
+}
+
+/* line 316, /Volumes/DataMacOSX/Users/tr0ngrg/code/vmart/app/assets/stylesheets/application.css.sass */
+.cufon-replacing * {
+  visibility: visible !important;
+}

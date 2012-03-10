@@ -15,6 +15,8 @@
                   = image_tag ("Logo_V-Mart.png")
                 %ul.nav_bar_container
                   %li.nav_item
+                    = link_to "Home", "/"
+                  %li.nav_item
                     = link_to "About Us", "/about"
                     %ul.sub_menu
                       %li.sub_menu_item
@@ -56,12 +58,13 @@
                 .ajax_content
               #content_surrogate
                 #flash
+                  .close_btn
                   %object{ :classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :codebase => "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0", :width => "978", :height => "550"}
                     %param{ :name => "movie", :value => "slideshow_fv8.swf"}
                     %param{ :name => "quality", :value => "high"}
                     %param{ :name => "menu", :value => "false"}
                     %param{ :name => "wmode", :value => "transparent"}
                     %embed{ :src => "slideshow_fv8.swf", :quality => "high", :menu => "true", :wmode => "transparent", :pluginspage => "http://www.macromedia.com/go/getflashplayer", :type => "application/x-shockwave-flash", :width => "978", :height => "450"}
-                .truck
+                .cargo_ship
 
               .clear

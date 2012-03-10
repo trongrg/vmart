@@ -27,6 +27,8 @@ $(document).ready ->
     disableHI: true
   )
   $("#nav_bar .nav_item a, #nav_bar .sub_menu_item a").click (e) ->
+    if ($(e.target).parents("a").attr("href") == "/")
+      return true
     e.preventDefault()
     if ($("#flash").is(":visible"))
       $("#flash").hide()
@@ -73,8 +75,8 @@ $(document).ready ->
         }
       )
     else
-      #show truck div
-      $("#content_surrogate .truck").show()
+      #show cargo ship div
+      $("#content_surrogate .cargo_ship").show()
       #ajax content go to the right
       $("#content .ajax_content").animate(
         {left: 1000}
@@ -85,26 +87,26 @@ $(document).ready ->
             $("#content .ajax_content").css("left", "-960px")
         }
       )
-      #truck fly from left to right
-      $("#content_surrogate .truck").css("z-index", "2000")
-      $("#content_surrogate .truck").animate(
+      #cargo ship fly from left to right
+      $("#content_surrogate .cargo_ship").css("z-index", "2000")
+      $("#content_surrogate .cargo_ship").animate(
         {left: 0}
         {
           duration: 500
           complete: () ->
-            #load ajax content when the truck is being displayed
+            #load ajax content when the cargo_ship is being displayed
             $.ajax(
               url: url
               success: (response) ->
                 $("#content .ajax_content").html(response)
-                #after successfully load ajax content, the truck flys to the right and go out
-                $("#content_surrogate .truck").animate(
+                #after successfully load ajax content, the cargo_ship flys to the right and go out
+                $("#content_surrogate .cargo_ship").animate(
                   {left: "+=1000px"}
                   {
                     duration: 500
                     complete: () ->
-                      #reset position of the truck
-                      $("#content_surrogate .truck").css("left", "-960px")
+                      #reset position of the cargo ship
+                      $("#content_surrogate .cargo_ship").css("left", "-960px")
                   }
                 )
                 #ajax content fly from left to center
@@ -115,6 +117,9 @@ $(document).ready ->
             )
         }
       )
+  $("#content_surrogate .close_btn").click (e) ->
+    $("#flash").slideUp()
+
   $("#content .close_btn").click (e) ->
     $target = $("#nav_bar .nav_item>.active")
     if ($target.length == 0)
@@ -122,8 +127,6 @@ $(document).ready ->
     top = "-=" + ($("#content_surrogate").offset().top - $target.offset().top - 25).toString() + "px"
     left = "-=" + ($("#content_surrogate").offset().left - $target.offset().left - 25).toString() + "px"
 
-    if (!$("#flash").is(":visible"))
-      $("#flash").show()
     #content scale up to 1.1 size
     $("#content").animate(
       {
@@ -146,6 +149,8 @@ $(document).ready ->
             complete: () ->
               $("#content").hide()
               $target.removeClass("active")
+              if (!$("#flash").is(":visible"))
+                $("#flash").show()
           }
         )
     )

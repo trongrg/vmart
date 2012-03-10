@@ -10,10 +10,10 @@ body
   #logo
     float: left
   .tail_bg
-    background: url(tail-bg.jpg) repeat-y left top
+    background: url(tail-bg2.png) repeat-y left top
     .bot_bg
       min-height: 1000px
-      background: url(bot-bg.jpg) no-repeat left bottom
+      background: url(site_bg.jpg) no-repeat left bottom
   li
     list-style: none
     margin-bottom: 5px
@@ -27,13 +27,21 @@ body
       position: relative
       overflow: hidden
       padding: 20px
-      .truck
-        background: url("cargo_ship2.png") no-repeat center
+      .cargo_ship
+        background: url("cargo_ship.png") no-repeat center
         display: none
         width: 960px
         height: 600px
         position: absolute
         left: -960px
+      .close_btn
+        background: url("close_btn.png")
+        width: 40px
+        height: 40px
+        position: absolute
+        top: 25px
+        right: 5px
+        z-index: 1
     #content
       //@include box-shadow(0 0 10px 5px #2db5e1)
       @include clearfix
@@ -76,7 +84,7 @@ body
         float: right
         @include clearfix
         @include border-radius(10px)
-        background: white
+        background: orange
         padding: 0
         position: relative
         overflow: visible
@@ -85,11 +93,11 @@ body
           padding: 15px
           margin: 0
           float: left
-          background: url("/assets/menu_separator.gif") right 0 no-repeat
+          background: url("/assets/menu_separator.png") right 0 no-repeat
           position: relative
           line-height: 20px
           a
-            color: #708389
+            color: white
             font-size: 15px
             text-transform: uppercase
           a.active
@@ -110,7 +118,7 @@ body
           z-index: 20
           width: 200px
           .sub_menu_item
-            background: white
+            background: orange
             border: 1px solid #DFE5E8
             width: 150px
             padding: 0px 5px
@@ -157,7 +165,7 @@ legend
         float: right
         @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
   .map
-    width: 400px
+    width: 500px
     height: 326px
     margin-left: 20px
 a
@@ -269,7 +277,7 @@ li.none_style
     input[type='submit']
       float: right
       @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
-      width: 100px
+      width: 200px
       margin-right: 100px
       margin-top: 30px
 .service_page_image

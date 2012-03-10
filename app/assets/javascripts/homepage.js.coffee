@@ -52,9 +52,9 @@ $(document).ready ->
       $("#content").width(width).height(height)
       $("#content").show()
       $("#content").offset($(this).offset())
-      $("#content").offset($(this).offset())
       top = "+=" + ($("#content_surrogate").offset().top - $(this).offset().top - 25).toString() + "px"
       left = "+=" + ($("#content_surrogate").offset().left - $(this).offset().left - 25).toString() + "px"
+      $("#content").offset($(this).offset())
       #content fly and scale to 1.1 size of real content
       $("#content").animate(
         {

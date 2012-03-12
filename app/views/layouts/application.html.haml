@@ -5,66 +5,79 @@
     = stylesheet_link_tag :application
     %title VMart Logistics
   %body
-    .tail_bg
-      .top_bg
-        .bot_bg
-          .container_12
-            #container
-              #nav_bar
-                #logo
-                  = image_tag ("Logo_V-Mart.png")
-                %ul.nav_bar_container
-                  %li.nav_item
-                    = link_to "Home", "/"
-                  %li.nav_item
-                    = link_to "About Us", "/about"
-                    %ul.sub_menu
-                      %li.sub_menu_item
-                        = link_to "Brief Outlook", "/brief_outlook"
-                      %li.sub_menu_item
-                        = link_to "Consign A Shipment", "/consign_a_shipment"
-                      %li.sub_menu_item
-                        = link_to "Bank Details", "/bank_details"
-                  %li.nav_item
-                    = link_to "Services", "/services"
-                    %ul.sub_menu
-                      %li.sub_menu_item
-                        = link_to "Sea Freight", "/sea_freight"
-                      %li.sub_menu_item
-                        = link_to "Air Freight", "/air_freight"
-                      %li.sub_menu_item
-                        = link_to "Pickup/Delivery".html_safe, "/pickup_delivery"
-                      %li.sub_menu_item
-                        = link_to "Consolidation/Warehouse".html_safe, "/consolidation_warehouse"
-                      %li.sub_menu_item
-                        = link_to "Heavy Lift", "/heavy_lift"
-                      %li.sub_menu_item
-                        = link_to "Removal/Packing", "/removal_packing"
-                  %li.nav_item
-                    = link_to "Tools", "/tools"
-                  %li.nav_item
-                    = link_to "Links", "/links"
-                  %li.nav_item
-                    = link_to "Documents", "/documents"
-                  %li.nav_item
-                    = link_to "News", "/news"
-                  %li.nav_item
-                    = link_to "Contact", "/contact"
-                  %li.nav_item.last_item
-                    = link_to "Quote", "/quote"
-                %div{ :style => "clear:both" }
-              #content
-                .close_btn
-                .ajax_content
-              #content_surrogate
-                #flash
-                  .close_btn
-                  %object{ :classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :codebase => "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0", :width => "978", :height => "550"}
-                    %param{ :name => "movie", :value => "slideshow_fv8.swf"}
-                    %param{ :name => "quality", :value => "high"}
-                    %param{ :name => "menu", :value => "false"}
-                    %param{ :name => "wmode", :value => "transparent"}
-                    %embed{ :src => "slideshow_fv8.swf", :quality => "high", :menu => "true", :wmode => "transparent", :pluginspage => "http://www.macromedia.com/go/getflashplayer", :type => "application/x-shockwave-flash", :width => "978", :height => "450"}
-                .cargo_ship
+    %img.bg{ :src => "/assets/world_map.jpg" }
+    .container
+      #nav_bar
+        #logo
+          = image_tag ("Logo_V-Mart.png")
+        %ul.nav_bar_container
+          %li.nav_item
+            = link_to "Home", "/"
+          %li.nav_item
+            = link_to "About Us", "/about"
+            %ul.sub_menu
+              %li.sub_menu_item
+                = link_to "Brief Outlook", "/brief_outlook"
+              %li.sub_menu_item
+                = link_to "Consign A Shipment", "/consign_a_shipment"
+              %li.sub_menu_item
+                = link_to "Bank Details", "/bank_details"
+          %li.nav_item
+            = link_to "Services", "/services"
+            %ul.sub_menu
+              %li.sub_menu_item
+                = link_to "Sea Freight", "/sea_freight"
+              %li.sub_menu_item
+                = link_to "Air Freight", "/air_freight"
+              %li.sub_menu_item
+                = link_to "Pickup/Delivery".html_safe, "/pickup_delivery"
+              %li.sub_menu_item
+                = link_to "Consolidation/Warehouse".html_safe, "/consolidation_warehouse"
+              %li.sub_menu_item
+                = link_to "Heavy Lift", "/heavy_lift"
+              %li.sub_menu_item
+                = link_to "Removal/Packing", "/removal_packing"
+          %li.nav_item
+            = link_to "Tools", "/tools"
+          %li.nav_item
+            = link_to "Links", "/links"
+          %li.nav_item
+            = link_to "Documents", "/documents"
+          %li.nav_item
+            = link_to "News", "/news"
+          %li.nav_item
+            = link_to "Contact", "/contact"
+          %li.nav_item.last_item
+            = link_to "Quote", "/quote"
+        %div{ :style => "clear:both" }
 
-              .clear
+
+      #content
+        .close_btn
+        .ajax_content
+      #content_surrogate
+        #carousel
+          %ul#roundabout
+            %li
+              = image_tag 'slides/image1.jpg'
+              .image_bg
+              .info Handling with heart
+            %li
+              = image_tag 'slides/image2.png'
+              .image_bg
+              .info Shipping quality is job no. 1
+            %li
+              = image_tag 'slides/image3.png'
+              .image_bg
+              .info Shipping quality is job no. 1
+        .cargo_ship
+
+      .clear
+
+:coffeescript
+  Cufon.now()
+  $("ul#roundabout").roundabout
+    shape: 'square'
+    autoplay: true
+    autoplayDuration: 3000
+    autoplayPauseOnHover: true

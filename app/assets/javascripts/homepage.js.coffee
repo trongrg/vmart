@@ -26,16 +26,17 @@ $(document).ready ->
     dropShadows: true
     disableHI: true
   )
+
   $("#nav_bar .nav_item a, #nav_bar .sub_menu_item a").click (e) ->
     if ($(e.target).parents("a").attr("href") == "/")
       return true
     e.preventDefault()
-    if ($("#flash").is(":visible"))
-      $("#flash").hide()
+    if ($("#carousel").is(":visible"))
+      $("#carousel").hide()
     url = $(this).attr("href")
     #do nothing if the link is already active
-    if $(this).is(".active")
-      return false
+    #if $(this).is(".active")
+      #return false
     #change active link
     $("#nav_bar .active").removeClass("active")
     $(this).addClass("active")
@@ -119,7 +120,7 @@ $(document).ready ->
         }
       )
   $("#content_surrogate .close_btn").click (e) ->
-    $("#flash").slideUp()
+    $("#carousel").slideUp()
 
   $("#content .close_btn").click (e) ->
     $target = $("#nav_bar .nav_item>.active")
@@ -150,63 +151,11 @@ $(document).ready ->
             complete: () ->
               $("#content").hide()
               $target.removeClass("active")
-              if (!$("#flash").is(":visible"))
-                $("#flash").show()
+              if (!$("#carousel").is(":visible"))
+                $("#carousel").show()
           }
         )
     )
-  #$("#nav_bar .nav_item a.item").mouseover (e) ->
-    #$target = $(e.currentTarget)
-    #clearTimeout($(document).data[$target.text()])
-    #$target.offset($target.offset())
-    #$target.animate(
-      #{top: "-=8px"}
-      #{duration: 200}
-    #)
-    #$sub_menu = $(".sub_menu[item='"+$target.text()+"']")
-    #$sub_menu.show()
-    #$sub_menu.offset($target.offset())
-    #$sub_menu.animate(top: 0)
-
-  #$("#nav_bar .nav_item a.item").mouseout (e) ->
-    #$target = $(e.currentTarget)
-    #$target.animate(
-      #{top: "+=8px"}
-      #{duration: 200}
-    #)
-    #$sub_menu = $(".sub_menu[item='"+$target.text()+"']")
-    #$(document).data[$target.text()] = setTimeout(
-      #() ->
-        #$sub_menu.animate(
-          #{top: "-="+($sub_menu.height()+8)+"px"}
-          #{
-            #duration: 200
-            #complete: () ->
-              #$sub_menu.hide()
-          #}
-        #)
-      #200
-    #)
-
-  #$("#nav_bar .sub_menu").mouseleave (e) ->
-    #$sub_menu = $(e.currentTarget)
-    #$(document).data[$sub_menu.attr('item')]= setTimeout(
-      #() ->
-        #$sub_menu.animate(
-          #{top: "-="+($sub_menu.height()+8)+"px"}
-          #{
-            #duration: 200
-            #complete: () ->
-              #$sub_menu.hide()
-          #}
-        #)
-      #200
-    #)
-
-
-  #$("#nav_bar .sub_menu").mouseenter (e) ->
-    #$sub_menu = $(e.currentTarget)
-    #clearTimeout($(document).data[$sub_menu.attr('item')])
 
   $("#contact_form").submit (e) ->
     alert("submit")
@@ -221,4 +170,3 @@ $(document).ready ->
     return false
   $("input[type='submit']").click (e) ->
     alert("submit")
-

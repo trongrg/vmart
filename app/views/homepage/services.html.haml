@@ -1,20 +1,78 @@
 %fieldset
   %legend
     Services
-  .container.services
+  .sub_container.services
     %h3 Shipping quality is job no. 1
-    .sea_freight.left
-      %h3 Sea Freight
-      = image_tag "services/sea_freight.png"
-    .air_freight.left
-      %h3 Air Freight
-      = image_tag "services/air_freight.png"
+    .service.left
+      %a{ :href => "/sea_freight" }
+        %h3 Sea Freight
+        = image_tag "services/sea_freight.png"
+    .service.left
+      %a{ :href => "/air_freight" }
+        %h3 Air Freight
+        = image_tag "services/air_freight.png"
+    .service.left
+      %a{ :href => "/pickup_delivery" }
+        %h3 Pickup/Delivery
+        = image_tag "services/pickup_delivery.jpg"
     %div{ :style => "clear: both" }
-    .truck.left
-      %h3 Truck
-      = image_tag "services/truck.png"
-    .broker.left
-      %h3 Customer Broker
-      = image_tag "services/broker.png"
+    .service.left
+      %a{ :href => "/consolidation_warehouse" }
+        %h3 Consolidation/Warehouse
+        = image_tag "services/consolidation_warehouse.jpg"
+    .service.left
+      %a{ :href => "/heavy_lift" }
+        %h3 Heavy Lift
+        = image_tag "services/heavy_lift.jpg"
+    .service.left
+      %a{ :href => "/packing_removal" }
+        %h3 Packing/Removal
+        = image_tag "services/packing_removal.jpg"
     %div{ :style => "clear: both" }
 = javascript_include_tag 'cufon-refresh'
+:coffeescript
+  $("fieldset .services .service a").click (e) ->
+    e.preventDefault()
+    url = $(this).attr("href")
+    #show cargo ship div
+    $("#content_surrogate .cargo_ship").show()
+    #ajax content go to the right
+    $("#content .ajax_content").animate(
+      {left: 1000}
+      {
+        duration: 500
+        complete: () ->
+          #reset ajax content position to the left of visible content
+          $("#content .ajax_content").css("left", "-960px")
+      }
+    )
+    #cargo ship fly from left to right
+    $("#content_surrogate .cargo_ship").css("z-index", "2000")
+    $("#content_surrogate .cargo_ship").animate(
+      {left: 0}
+      {
+        duration: 500
+        complete: () ->
+          #load ajax content when the cargo_ship is being displayed
+          $.ajax(
+            url: url
+            success: (response) ->
+              $("#content .ajax_content").html(response)
+              #after successfully load ajax content, the cargo_ship flys to the right and go out
+              $("#content_surrogate .cargo_ship").animate(
+                {left: "+=1000px"}
+                {
+                  duration: 500
+                  complete: () ->
+                    #reset position of the cargo ship
+                    $("#content_surrogate .cargo_ship").css("left", "-960px")
+                }
+              )
+              #ajax content fly from left to center
+              $("#content .ajax_content").animate(
+                {left: 20}
+                {duration: 500}
+              )
+          )
+      }
+    )

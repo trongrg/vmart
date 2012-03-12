@@ -6,24 +6,77 @@
 @import 'sassy-buttons'
 body
   margin: 0
-  font-family: 'Georgia Pro', Georgia, sans-serif
+  font-family: 'Helvetica Neue', Helvetica, sans-serif
   #logo
     float: left
-  .tail_bg
-    background: url(tail-bg2.png) repeat-y left top
-    .bot_bg
-      min-height: 1000px
-      background: url(site_bg.jpg) no-repeat left bottom
+  img.bg
+    /* Set rules to fill background */
+    min-height: 100%
+    min-width: 1024px
+
+    /* Set up proportionate scaling */
+    width: 100%
+    height: auto
+
+    /* Set up positioning */
+    position: fixed
+    top: 0
+    left: 0
+    z-index: -1
+
+  /* Specific to this particular image */
+  @media screen and (max-width: 1024px)
+    img.bg
+      left: 50%
+      /* 50% */
+      margin-left: -512px
+
   li
     list-style: none
     margin-bottom: 5px
-  #container
+  #carousel
+    width: 100%
+    height: 404px
+    text-align: center
+    overflow: hidden
+    #roundabout
+      display: inline-block
+      .image_bg
+        background: url('/assets/slides/image4.png') no-repeat bottom center transparent
+        width: 100%
+        height: 30px
+    .roundabout-holder
+      width: 920px
+      height: 384px
+      margin: 0 auto
+      .roundabout-moveable-item
+        width: 700px
+        height: 384px
+        cursor: pointer
+        padding-bottom: 10px
+        img
+          width: 100%
+          height: 100%
+          display: block
+          vertical-align: top
+          @include border-radius(5px)
+        .info
+          position: absolute
+          width: 100%
+          height: 74px
+          margin-top: -104px
+          background: url(/assets/slides/bg_info.png)
+          display: block
+          font-size: 64px !important
+          line-height: 60px
+          left: 0
+  .container
     width: 960px
     margin: auto
     @include clearfix
     #content_surrogate
       height: 600px
-      margin: 50px auto
+      margin: 0px auto
       position: relative
       overflow: hidden
       padding: 20px
@@ -56,7 +109,7 @@ body
       @include border-radius(15px)
       width: 880px
       padding: 50px 20px 20px 20px
-      behaviour: url('ie-css3.htc')
+      behaviour: url('ie_css3.htc')
       z-index: 10
       .close_btn
         background: url("close_btn.png")
@@ -80,8 +133,8 @@ body
           color: orange
           text-align: center
     #nav_bar
-      padding-top: 50px
       ul.nav_bar_container
+        margin-top: 30px
         float: right
         @include clearfix
         @include border-radius(10px)
@@ -89,26 +142,27 @@ body
         padding: 0
         position: relative
         overflow: visible
-        behaviour: url('ie-css3.htc')
+        behaviour: url('ie_css3.htc')
         .nav_item
-          padding: 15px
           margin: 0
           float: left
           background: url("/assets/menu_separator.png") right 0 no-repeat
           position: relative
           line-height: 20px
-          a
+          >a
+            display: block
+            margin: 15px
             color: white
             font-size: 15px
             text-transform: uppercase
-          a.active
-            color: #0CA3D0
+          >a.active
+            color: #43A9FD
           &:hover
             .sub_menu
               top: 51px
             cursor: pointer
             >a
-              color: #0CA3D0
+              color: #43A9FD
         .nav_item.last_item
           background: none
         .sub_menu
@@ -116,7 +170,7 @@ body
           left: 0
           top: 51px
           padding: 0
-          z-index: 20
+          z-index: 300
           width: 200px
           .sub_menu_item
             background: orange
@@ -128,18 +182,21 @@ body
             @include border-radius(10px)
             position: relative
             float: left
-            behaviour: url('ie-css3.htc')
+            behaviour: url('ie_css3.htc')
             &:hover
               background: #32A7BF
             a
+              color: white
               font-size: 12px
               padding: 7px
               margin: 3px 0px
               text-transform: uppercase
               text-decoration: none
               @include border-radius(12px)
-              behaviour: url('ie-css3.htc')
+              behaviour: url('ie_css3.htc')
               &:hover
+                color: white
+              >a.active
                 color: white
 
 legend
@@ -164,11 +221,11 @@ legend
         @include border-radius(5px)
         border: 1px solid #32A7BF
         font-size: 120%
-        behaviour: url('ie-css3.htc')
+        behaviour: url('ie_css3.htc')
       input[type='submit']
         float: right
         @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
-        behaviour: url('ie-css3.htc')
+        behaviour: url('ie_css3.htc')
   .map
     width: 500px
     height: 350px
@@ -192,7 +249,7 @@ a
   height: 400px
   width: 400px
   @include border-radius(10px)
-  behaviour: url('ie-css3.htc')
+  behaviour: url('ie_css3.htc')
 
 .useful_link
   font-size: 20px
@@ -209,7 +266,7 @@ a
 
 fieldset
   @include border-radius(10px)
-  behaviour: url('ie-css3.htc')
+  behaviour: url('ie_css3.htc')
 
 #download
   height: 60px
@@ -221,14 +278,15 @@ fieldset
   margin-left: 150px
   border: 20px
 
-.container
-  margin: 5px
+.sub_container
+  width: 893px
+  @include clearfix
 
 #document_image
   height: 200px
   width: 200px
   @include border-radius(5px)
-  behaviour: url('ie-css3.htc')
+  behaviour: url('ie_css3.htc')
 
 
 .invoice_link
@@ -256,9 +314,12 @@ li.none_style
   p
     margin-left: 30px
 .services
-  div
+  .service
     margin-left: 20px
     margin-right: 40px
+    img
+      width: 200px
+      height: 150px
 
 .news
   .links
@@ -283,7 +344,7 @@ li.none_style
       width: 500px
       padding: 5px
       font-size: 120%
-      behaviour: url('ie-css3.htc')
+      behaviour: url('ie_css3.htc')
 
     input[type='submit']
       float: right
@@ -291,7 +352,7 @@ li.none_style
       width: 200px
       margin-right: 100px
       margin-top: 30px
-      behaviour: url('ie-css3.htc')
+      behaviour: url('ie_css3.htc')
 
 .service_page_image
   height: 400px

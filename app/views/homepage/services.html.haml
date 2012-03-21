@@ -6,7 +6,7 @@
     .service.left
       %a{ :href => "/sea_freight" }
         %h3 Sea Freight
-        = image_tag "services/sea_freight.png"
+        = image_tag "services/seafreight.jpg"
     .service.left
       %a{ :href => "/air_freight" }
         %h3 Air Freight
@@ -25,10 +25,11 @@
         %h3 Heavy Lift
         = image_tag "services/heavy_lift.jpg"
     .service.left
-      %a{ :href => "/packing_removal" }
+      %a{ :href => "/removal_packing" }
         %h3 Packing/Removal
-        = image_tag "services/packing_removal.jpg"
+        = image_tag "services/packing_removal.png"
     %div{ :style => "clear: both" }
+
 = javascript_include_tag 'cufon-refresh'
 :coffeescript
   $("fieldset .services .service a").click (e) ->

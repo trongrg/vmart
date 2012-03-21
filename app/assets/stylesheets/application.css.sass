@@ -76,7 +76,7 @@ body
     margin: auto
     @include clearfix
     #content_surrogate
-      height: 600px
+      height: 400px
       margin: 0px auto
       position: relative
       overflow: hidden
@@ -85,17 +85,9 @@ body
         background: url("cargo_ship.png") no-repeat center
         display: none
         width: 960px
-        height: 600px
+        height: 400px
         position: absolute
         left: -960px
-      .close_btn
-        background: url("close_btn.png")
-        width: 40px
-        height: 40px
-        position: absolute
-        top: 25px
-        right: 5px
-        z-index: 1
     #content
       //@include box-shadow(0 0 10px 5px #2db5e1)
       @include clearfix
@@ -103,29 +95,30 @@ body
       display: none
       background: url('box-tail.png') repeat transparent
       //@include linear-gradient(#74d3f3, #2db5e1)
-      height: 600px
+      height: 400px
       //@include opacity(0.85)
       margin: auto
       color: #3C4346
       @include border-radius(15px)
       width: 880px
-      padding: 50px 20px 20px 20px
+      padding: 40px 20px 20px 20px
       behaviour: url('ie_css3.htc')
       z-index: 10
       .close_btn
-        background: url("close_btn.png")
-        width: 40px
-        height: 40px
+        width: 32px
+        height: 32px
         position: absolute
-        top: 10px
-        right: 10px
+        top: 0px
+        right: 0px
         z-index: 30
+        img
+          cursor: pointer
       .ajax_content
-        height: 560px
+        height: 400px
         width: 940px
-        padding-right: 20px
         position: absolute
-        overflow: auto
+        overflow-y: auto
+        overflow-x: hidde
         h1
           color: silver
         h2, h3
@@ -135,7 +128,7 @@ body
           text-align: center
     #nav_bar
       ul.nav_bar_container
-        margin-top: 30px
+        margin-top: 15px
         float: right
         @include clearfix
         @include border-radius(10px)
@@ -228,7 +221,7 @@ legend
         @include sassy-button("shiny", 15px, 16px, #ff8a1a, #ff8a1a)
         behaviour: url('ie_css3.htc')
   .map
-    width: 500px
+    width: 460px
     height: 350px
     margin-left: 20px
 a
@@ -280,7 +273,7 @@ fieldset
   border: 20px
 
 .sub_container
-  width: 893px
+  width: 883px
   @include clearfix
 
 #document_image
@@ -369,6 +362,11 @@ li.none_style
     margin-left: 20px
     a
       text-decoration: none
+      border: none
+      img
+        border: none
+    img
+      border: none
     .download
       margin-top: 100px
 
@@ -378,3 +376,7 @@ li.none_style
 .cufon-replacing
   *
     visibility: visible !important
+.copyright
+  float: right
+  font-size: 12px
+  margin: 5px 30px 0 0

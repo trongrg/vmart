@@ -10,6 +10,11 @@
       #nav_bar
         #logo
           = image_tag ("Logo_V-Mart.png")
+        .copyright
+          &copy; 2012
+          = link_to "VMart Logistics", "/"
+          , powered by
+          = link_to "Bullhead", "mailto:ntvan2104@gmail.com"
         %ul.nav_bar_container
           %li.nav_item
             = link_to "Home", "/"
@@ -54,6 +59,7 @@
 
       #content
         .close_btn
+          = image_tag('close_btn.png')
         .ajax_content
       #content_surrogate
         #carousel

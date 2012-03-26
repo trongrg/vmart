@@ -60,17 +60,6 @@ body
           display: block
           vertical-align: top
           @include border-radius(10px)
-        .info
-          position: absolute
-          width: 100%
-          height: 74px
-          margin-top: 0
-          background: url(/assets/slides/bg_info.png)
-          display: block
-          font-size: 64px !important
-          line-height: 60px
-          left: 0
-          @include border-radius(10px 10px 0 0)
   .container
     width: 960px
     margin: auto
@@ -240,8 +229,9 @@ a
   float: right
 
 #link_image
-  height: 400px
-  width: 400px
+  height: 340px
+  width: 340px
+  margin-left: 30px
   @include border-radius(10px)
   behaviour: url('ie_css3.htc')
 
@@ -250,12 +240,15 @@ a
   margin-top: 10px
   li
     @include clearfix
+    margin: 0
   img
     float: left
     margin-right: 5px
+    width: 30px
+    height: 30px
   a
     display: block
-    padding-top: 5px
+    padding-top: 2px
     float: left
 
 fieldset
@@ -307,13 +300,18 @@ li.none_style
 .consign_shipment
   p
     margin-left: 30px
+h1
+  margin: 0
+h3
+  margin: 10px auto
 .services
   .service
-    margin-left: 20px
-    margin-right: 40px
+    margin: 0 46px
     img
       width: 200px
-      height: 150px
+      height: 130px
+    h3
+      margin-top: 0
 
 .news
   .links
@@ -380,3 +378,15 @@ li.none_style
   float: right
   font-size: 12px
   margin: 5px 30px 0 0
+#slogan
+  position: absolute
+  width: 100%
+  height: 74px
+  display: block
+  font-size: 64px !important
+  line-height: 60px
+  @include border-radius(10px 10px 0 0)
+  z-index: 290
+  text-align: center
+ul
+  margin: 0

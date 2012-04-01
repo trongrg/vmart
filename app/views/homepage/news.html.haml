@@ -4,7 +4,17 @@
   .news
     .picture.left
       = image_tag "news.jpg"
-    .links.left
-      %h3 Bangkok October 8th, 2010
-      = link_to "Viffas Country Report", "/viffas_country_report.pdf", :target => "_blank"
+    %ul.links.left
+      %li
+        %h3 Bangkok October 8th, 2010
+        = link_to "Viffas Country Report", "/viffas_country_report.pdf", :target => "_blank"
+      %li
+        %h3 December 11th, 2006
+        %a{:href => "http://www.shippingline.biz/Logistics/Sphinx-Egypt-sits-well-within-Worldwide-Project-Consortium.html", :target => "_blank"} Sphinx Egypt sits well within Worldwide Project Consortium
+      %li
+        %h3 September 6th, 2006
+        %a{:href => "http://www.shippingline.biz/Logistics/Geodis-2006-half-year-results.html", :target => "_blank"} Geodis: 2006 half-year results
+      %li
+        %h3 September 5th, 2006
+        %a{:href => "http://www.shippingline.biz/Logistics/FedEx-Completes-Acquisition-of-Watkins-Motor-Lines.html", :target => "_blank"} FedEx Completes Acquisition of Watkins Motor Lines
 = javascript_include_tag 'cufon-refresh'
